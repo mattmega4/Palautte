@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11758" systemVersion="16B2659" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="BackgroundColor" representedClassName="BackgroundColor" syncable="YES">
+        <attribute name="blueValue" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="greenValue" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="redValue" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="toPalautte" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Palautte" inverseName="toBackgroundColor" inverseEntity="Palautte" syncable="YES"/>
+    </entity>
+    <entity name="ForegroundColor" representedClassName="ForegroundColor" syncable="YES">
+        <attribute name="blueValue" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="greenValue" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="redValue" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="toPalautte" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Palautte" inverseName="toForegroundColor" inverseEntity="Palautte" syncable="YES"/>
+    </entity>
+    <entity name="Online" representedClassName="Online" syncable="YES">
+        <attribute name="isOnline" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="toPalautte" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Palautte" inverseName="toOnline" inverseEntity="Palautte" syncable="YES"/>
+    </entity>
+    <entity name="Palautte" representedClassName="Palautte" syncable="YES">
+        <attribute name="category" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="toBackgroundColor" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="BackgroundColor" inverseName="toPalautte" inverseEntity="BackgroundColor" syncable="YES"/>
+        <relationship name="toForegroundColor" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ForegroundColor" inverseName="toPalautte" inverseEntity="ForegroundColor" syncable="YES"/>
+        <relationship name="toOnline" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Online" inverseName="toPalautte" inverseEntity="Online" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="BackgroundColor" positionX="-108" positionY="-96" width="128" height="105"/>
+        <element name="ForegroundColor" positionX="-101" positionY="-438" width="128" height="105"/>
+        <element name="Online" positionX="-74" positionY="-273" width="128" height="75"/>
+        <element name="Palautte" positionX="-324" positionY="-318" width="128" height="120"/>
+    </elements>
+</model>
