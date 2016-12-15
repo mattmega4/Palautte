@@ -8,22 +8,50 @@
 
 /* Begin PBXBuildFile section */
 		1DA83A0B1E0244C500BB5C30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA83A0A1E0244C500BB5C30 /* AppDelegate.swift */; };
-		1DA83A0D1E0244C500BB5C30 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA83A0C1E0244C500BB5C30 /* ViewController.swift */; };
 		1DA83A101E0244C500BB5C30 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DA83A0E1E0244C500BB5C30 /* Main.storyboard */; };
-		1DA83A131E0244C500BB5C30 /* Palautte.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1DA83A111E0244C500BB5C30 /* Palautte.xcdatamodeld */; };
 		1DA83A151E0244C500BB5C30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DA83A141E0244C500BB5C30 /* Assets.xcassets */; };
 		1DA83A181E0244C500BB5C30 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DA83A161E0244C500BB5C30 /* LaunchScreen.storyboard */; };
+		1DA83A211E02454C00BB5C30 /* LandingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA83A1F1E02454C00BB5C30 /* LandingPageViewController.swift */; };
+		1DA83A221E02454C00BB5C30 /* AddPalautteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA83A201E02454C00BB5C30 /* AddPalautteViewController.swift */; };
+		1DA83A241E02456100BB5C30 /* SavedPalauttesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA83A231E02456100BB5C30 /* SavedPalauttesViewController.swift */; };
+		1DA83A261E02456700BB5C30 /* LocalPalautteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA83A251E02456700BB5C30 /* LocalPalautteTableViewCell.swift */; };
+		1DA83A291E02457100BB5C30 /* EditColorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA83A271E02457100BB5C30 /* EditColorsViewController.swift */; };
+		1DA83A2A1E02457100BB5C30 /* EditDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA83A281E02457100BB5C30 /* EditDetailsViewController.swift */; };
+		1DA83A2C1E0245A300BB5C30 /* Palautte.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 1DA83A2B1E0245A300BB5C30 /* Palautte.xcdatamodel */; };
+		1DA83A3D1E0246B500BB5C30 /* BackgroundColor+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA83A351E0246B500BB5C30 /* BackgroundColor+CoreDataClass.swift */; };
+		1DA83A3E1E0246B500BB5C30 /* BackgroundColor+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA83A361E0246B500BB5C30 /* BackgroundColor+CoreDataProperties.swift */; };
+		1DA83A3F1E0246B500BB5C30 /* Palautte+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA83A371E0246B500BB5C30 /* Palautte+CoreDataClass.swift */; };
+		1DA83A401E0246B500BB5C30 /* Palautte+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA83A381E0246B500BB5C30 /* Palautte+CoreDataProperties.swift */; };
+		1DA83A411E0246B500BB5C30 /* ForegroundColor+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA83A391E0246B500BB5C30 /* ForegroundColor+CoreDataClass.swift */; };
+		1DA83A421E0246B500BB5C30 /* ForegroundColor+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA83A3A1E0246B500BB5C30 /* ForegroundColor+CoreDataProperties.swift */; };
+		1DA83A431E0246B500BB5C30 /* Online+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA83A3B1E0246B500BB5C30 /* Online+CoreDataClass.swift */; };
+		1DA83A441E0246B500BB5C30 /* Online+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA83A3C1E0246B500BB5C30 /* Online+CoreDataProperties.swift */; };
+		1DA83A461E02473F00BB5C30 /* ShadowForAddPalautteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA83A451E02473F00BB5C30 /* ShadowForAddPalautteTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1DA83A071E0244C500BB5C30 /* Palautte.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Palautte.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DA83A0A1E0244C500BB5C30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1DA83A0C1E0244C500BB5C30 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1DA83A0F1E0244C500BB5C30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		1DA83A121E0244C500BB5C30 /* Palautte.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Palautte.xcdatamodel; sourceTree = "<group>"; };
 		1DA83A141E0244C500BB5C30 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1DA83A171E0244C500BB5C30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1DA83A191E0244C500BB5C30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1DA83A1F1E02454C00BB5C30 /* LandingPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingPageViewController.swift; sourceTree = "<group>"; };
+		1DA83A201E02454C00BB5C30 /* AddPalautteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPalautteViewController.swift; sourceTree = "<group>"; };
+		1DA83A231E02456100BB5C30 /* SavedPalauttesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedPalauttesViewController.swift; sourceTree = "<group>"; };
+		1DA83A251E02456700BB5C30 /* LocalPalautteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalPalautteTableViewCell.swift; sourceTree = "<group>"; };
+		1DA83A271E02457100BB5C30 /* EditColorsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditColorsViewController.swift; sourceTree = "<group>"; };
+		1DA83A281E02457100BB5C30 /* EditDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditDetailsViewController.swift; sourceTree = "<group>"; };
+		1DA83A2B1E0245A300BB5C30 /* Palautte.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Palautte.xcdatamodel; sourceTree = "<group>"; };
+		1DA83A351E0246B500BB5C30 /* BackgroundColor+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BackgroundColor+CoreDataClass.swift"; sourceTree = "<group>"; };
+		1DA83A361E0246B500BB5C30 /* BackgroundColor+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BackgroundColor+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		1DA83A371E0246B500BB5C30 /* Palautte+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Palautte+CoreDataClass.swift"; sourceTree = "<group>"; };
+		1DA83A381E0246B500BB5C30 /* Palautte+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Palautte+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		1DA83A391E0246B500BB5C30 /* ForegroundColor+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ForegroundColor+CoreDataClass.swift"; sourceTree = "<group>"; };
+		1DA83A3A1E0246B500BB5C30 /* ForegroundColor+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ForegroundColor+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		1DA83A3B1E0246B500BB5C30 /* Online+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Online+CoreDataClass.swift"; sourceTree = "<group>"; };
+		1DA83A3C1E0246B500BB5C30 /* Online+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Online+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		1DA83A451E02473F00BB5C30 /* ShadowForAddPalautteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowForAddPalautteTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +84,101 @@
 		1DA83A091E0244C500BB5C30 /* Palautte */ = {
 			isa = PBXGroup;
 			children = (
-				1DA83A0A1E0244C500BB5C30 /* AppDelegate.swift */,
-				1DA83A0C1E0244C500BB5C30 /* ViewController.swift */,
-				1DA83A0E1E0244C500BB5C30 /* Main.storyboard */,
-				1DA83A141E0244C500BB5C30 /* Assets.xcassets */,
-				1DA83A161E0244C500BB5C30 /* LaunchScreen.storyboard */,
-				1DA83A191E0244C500BB5C30 /* Info.plist */,
-				1DA83A111E0244C500BB5C30 /* Palautte.xcdatamodeld */,
+				1DA83A301E0245B700BB5C30 /* Model */,
+				1DA83A2F1E0245B400BB5C30 /* View */,
+				1DA83A2E1E0245B200BB5C30 /* Controller */,
+				1DA83A2D1E0245AF00BB5C30 /* Additional Files */,
 			);
 			path = Palautte;
+			sourceTree = "<group>";
+		};
+		1DA83A2D1E0245AF00BB5C30 /* Additional Files */ = {
+			isa = PBXGroup;
+			children = (
+				1DA83A0A1E0244C500BB5C30 /* AppDelegate.swift */,
+				1DA83A141E0244C500BB5C30 /* Assets.xcassets */,
+				1DA83A191E0244C500BB5C30 /* Info.plist */,
+			);
+			name = "Additional Files";
+			sourceTree = "<group>";
+		};
+		1DA83A2E1E0245B200BB5C30 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1DA83A1F1E02454C00BB5C30 /* LandingPageViewController.swift */,
+				1DA83A201E02454C00BB5C30 /* AddPalautteViewController.swift */,
+				1DA83A321E02460C00BB5C30 /* Saved Palautte */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		1DA83A2F1E0245B400BB5C30 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1DA83A0E1E0244C500BB5C30 /* Main.storyboard */,
+				1DA83A161E0244C500BB5C30 /* LaunchScreen.storyboard */,
+				1DA83A471E02474400BB5C30 /* View Extensions */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		1DA83A301E0245B700BB5C30 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1DA83A351E0246B500BB5C30 /* BackgroundColor+CoreDataClass.swift */,
+				1DA83A371E0246B500BB5C30 /* Palautte+CoreDataClass.swift */,
+				1DA83A391E0246B500BB5C30 /* ForegroundColor+CoreDataClass.swift */,
+				1DA83A3B1E0246B500BB5C30 /* Online+CoreDataClass.swift */,
+				1DA83A2B1E0245A300BB5C30 /* Palautte.xcdatamodel */,
+				1DA83A311E0245BA00BB5C30 /* Generated */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		1DA83A311E0245BA00BB5C30 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				1DA83A361E0246B500BB5C30 /* BackgroundColor+CoreDataProperties.swift */,
+				1DA83A381E0246B500BB5C30 /* Palautte+CoreDataProperties.swift */,
+				1DA83A3A1E0246B500BB5C30 /* ForegroundColor+CoreDataProperties.swift */,
+				1DA83A3C1E0246B500BB5C30 /* Online+CoreDataProperties.swift */,
+			);
+			name = Generated;
+			sourceTree = "<group>";
+		};
+		1DA83A321E02460C00BB5C30 /* Saved Palautte */ = {
+			isa = PBXGroup;
+			children = (
+				1DA83A231E02456100BB5C30 /* SavedPalauttesViewController.swift */,
+				1DA83A331E02461D00BB5C30 /* Custom Cell */,
+				1DA83A341E02462B00BB5C30 /* Edit Cell */,
+			);
+			name = "Saved Palautte";
+			sourceTree = "<group>";
+		};
+		1DA83A331E02461D00BB5C30 /* Custom Cell */ = {
+			isa = PBXGroup;
+			children = (
+				1DA83A251E02456700BB5C30 /* LocalPalautteTableViewCell.swift */,
+			);
+			name = "Custom Cell";
+			sourceTree = "<group>";
+		};
+		1DA83A341E02462B00BB5C30 /* Edit Cell */ = {
+			isa = PBXGroup;
+			children = (
+				1DA83A271E02457100BB5C30 /* EditColorsViewController.swift */,
+				1DA83A281E02457100BB5C30 /* EditDetailsViewController.swift */,
+			);
+			name = "Edit Cell";
+			sourceTree = "<group>";
+		};
+		1DA83A471E02474400BB5C30 /* View Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1DA83A451E02473F00BB5C30 /* ShadowForAddPalautteTableViewCell.swift */,
+			);
+			name = "View Extensions";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,9 +254,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1DA83A131E0244C500BB5C30 /* Palautte.xcdatamodeld in Sources */,
-				1DA83A0D1E0244C500BB5C30 /* ViewController.swift in Sources */,
+				1DA83A431E0246B500BB5C30 /* Online+CoreDataClass.swift in Sources */,
+				1DA83A411E0246B500BB5C30 /* ForegroundColor+CoreDataClass.swift in Sources */,
+				1DA83A3D1E0246B500BB5C30 /* BackgroundColor+CoreDataClass.swift in Sources */,
+				1DA83A421E0246B500BB5C30 /* ForegroundColor+CoreDataProperties.swift in Sources */,
+				1DA83A401E0246B500BB5C30 /* Palautte+CoreDataProperties.swift in Sources */,
+				1DA83A2C1E0245A300BB5C30 /* Palautte.xcdatamodel in Sources */,
+				1DA83A291E02457100BB5C30 /* EditColorsViewController.swift in Sources */,
+				1DA83A221E02454C00BB5C30 /* AddPalautteViewController.swift in Sources */,
+				1DA83A2A1E02457100BB5C30 /* EditDetailsViewController.swift in Sources */,
+				1DA83A261E02456700BB5C30 /* LocalPalautteTableViewCell.swift in Sources */,
+				1DA83A441E0246B500BB5C30 /* Online+CoreDataProperties.swift in Sources */,
+				1DA83A241E02456100BB5C30 /* SavedPalauttesViewController.swift in Sources */,
+				1DA83A3E1E0246B500BB5C30 /* BackgroundColor+CoreDataProperties.swift in Sources */,
 				1DA83A0B1E0244C500BB5C30 /* AppDelegate.swift in Sources */,
+				1DA83A3F1E0246B500BB5C30 /* Palautte+CoreDataClass.swift in Sources */,
+				1DA83A211E02454C00BB5C30 /* LandingPageViewController.swift in Sources */,
+				1DA83A461E02473F00BB5C30 /* ShadowForAddPalautteTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,19 +434,6 @@
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		1DA83A111E0244C500BB5C30 /* Palautte.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				1DA83A121E0244C500BB5C30 /* Palautte.xcdatamodel */,
-			);
-			currentVersion = 1DA83A121E0244C500BB5C30 /* Palautte.xcdatamodel */;
-			path = Palautte.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 1DA839FF1E0244C500BB5C30 /* Project object */;
 }
