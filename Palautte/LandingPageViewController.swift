@@ -42,6 +42,8 @@ class LandingPageViewController: UIViewController, UITextFieldDelegate {
   @IBOutlet weak var blueLabel: UILabel!
   @IBOutlet weak var blueTextField: UITextField!
   
+  //  @IBOutlet weak var sliderHolderView: SliderHolderView!
+  
   let leftHiddenView = UIView()
   let centerHiddenView = UIView()
   let rightHiddenView = UIView()
@@ -509,24 +511,31 @@ class LandingPageViewController: UIViewController, UITextFieldDelegate {
   // MARK: Segue
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    if let destinationVC = segue.destination as? AddPalautteViewController{
+    
+    if segue.identifier == "fromLandingPageToAddPalautte" {
       
-      destinationVC.transferredRedBackgroundColorValue = currentGreenBackgroundFloat
-      destinationVC.transferredRedBackgroundColorValue = currentRedBackgroundFloat
-      destinationVC.transferredGreenBackgroundColorValue = currentGreenBackgroundFloat
-      destinationVC.transferredBlueBackgroundColorValue = currentBlueBackgroundFloat
+      if let controller = segue.destination as? UINavigationController {
+        
+        if let destinationVC = controller.topViewController as? AddPalautteViewController {
+          
+          destinationVC.transferredRedBackgroundColorValue = currentGreenBackgroundFloat
+          destinationVC.transferredRedBackgroundColorValue = currentRedBackgroundFloat
+          destinationVC.transferredGreenBackgroundColorValue = currentGreenBackgroundFloat
+          destinationVC.transferredBlueBackgroundColorValue = currentBlueBackgroundFloat
+          
+          destinationVC.transferredRedForegroundColorValue = currentRedForegroundFloat
+          destinationVC.transferredGreenForegroundColorValue = currentGreenForegroundFloat
+          destinationVC.transferredBlueForegroundColorValue = currentBlueForegroundFloat
+          
+          
+        }
+      }
       
-      destinationVC.transferredRedForegroundColorValue = currentRedForegroundFloat
-      destinationVC.transferredGreenForegroundColorValue = currentGreenForegroundFloat
-      destinationVC.transferredBlueForegroundColorValue = currentBlueForegroundFloat
     }
+    
   }
   
-  //    override func show(_ vc: UIViewController, sender: Any?) {
-  //
-  //
-  //
-  //    }
+  
   
   
   // MARK: Keyboard Methods

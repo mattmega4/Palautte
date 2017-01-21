@@ -33,7 +33,7 @@ class SavedPalauttesViewController: UIViewController{
     self.tableView.dataSource = self
     
     attemptFetch()
-    generateTestData()
+//    generateTestData()
     
   }
   
@@ -41,33 +41,12 @@ class SavedPalauttesViewController: UIViewController{
     super.viewWillAppear(animated)
     
   }
-  
-  
-  //TODO: Temporary...Finish Devslopes
-  
-  func generateTestData() {
     
-    
-    let item = Palautte(context: context)
-    item.name = "Snickers"
-    item.category = "KITTY"
-    
-    let item1 = Palautte(context: context)
-    item1.name = "Maximus"
-    item1.category = "KITTY"
-    
-    let item2 = Palautte(context: context)
-    item2.name = "EOWYN"
-    item2.category = "KITTY"
-    
-    ad.saveContext()
-    
-  }
-  
   
   // MARK: IBActions
   
   @IBAction func editNavBarButtonTapped(_ sender: UIBarButtonItem) {
+    
   }
   
 } // End of SavedPalauttesViewController Class
@@ -184,6 +163,8 @@ extension SavedPalauttesViewController: NSFetchedResultsControllerDelegate {
     
     let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
     
+    controller.delegate = self
+    
     self.controller = controller
     
     do {
@@ -197,7 +178,7 @@ extension SavedPalauttesViewController: NSFetchedResultsControllerDelegate {
       
     }
     
-//    let categorySort = NSSortDescriptor(key: "category", ascending: false)
+
     
     
   }

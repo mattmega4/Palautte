@@ -31,25 +31,16 @@ class AddPalautteViewController: UIViewController, UITextFieldDelegate, UIPicker
   
   @IBOutlet weak var savePalautteButton: UIButton!
   
-  var transferredRedBackgroundColorValue: Float = 255
-  var transferredGreenBackgroundColorValue: Float = 255
-  var transferredBlueBackgroundColorValue: Float = 255
+  var transferredRedBackgroundColorValue: Float?
+  var transferredGreenBackgroundColorValue: Float?
+  var transferredBlueBackgroundColorValue: Float?
   
-  var transferredRedForegroundColorValue: Float = 0
-  var transferredGreenForegroundColorValue: Float = 0
-  var transferredBlueForegroundColorValue: Float = 0
-  
-  
-  var redBackgroundColorValue: CGFloat = 255.0/255.0
-  var greenBackgroundColorValue: CGFloat = 255.0/255.0
-  var blueBackgroundColorValue: CGFloat = 255.0/255.0
-  
-  var redForegroundColorValue: CGFloat = 0.0/255.0
-  var greenForegroundColorValue: CGFloat = 0.0/255.0
-  var blueForegroundColorValue: CGFloat = 0.0/255.0
-  
-  var finalPalautteNameValue: String = "Untitled Palautte"
-  var finalPalautteCategoryValue: String = "Uncategorizdd"
+  var transferredRedForegroundColorValue: Float?
+  var transferredGreenForegroundColorValue: Float?
+  var transferredBlueForegroundColorValue: Float?
+
+  var finalPalautteNameValue: String?
+  var finalPalautteCategoryValue: String?
   
   var textRequirementIsFulfilled = false
   var textLimitRequirementIsFulfilled = true
@@ -92,6 +83,10 @@ class AddPalautteViewController: UIViewController, UITextFieldDelegate, UIPicker
     super.viewWillAppear(animated)
     
     setBackgroundAndForegroundCanvasColors()
+    
+    let bob = transferredBlueForegroundColorValue ?? 0
+    print(bob)
+    
     characterLimitLabel.text = "20 Characters Left"
   }
   
@@ -117,14 +112,15 @@ class AddPalautteViewController: UIViewController, UITextFieldDelegate, UIPicker
   }
   
   func setTextFieldValueToPropertyInPreperationForCoreDataStorage(textField: UITextField) {
+    
     if textField == nameTextField{
-      if let tempText = textField.text{
-        finalPalautteNameValue = tempText
-        if finalPalautteNameValue.isEmpty{
-          textRequirementIsFulfilled = false
-        } else {
-          textRequirementIsFulfilled = true
-        }
+      
+      finalPalautteNameValue = textField.text ?? ""
+      
+      if finalPalautteNameValue == "" {
+        textRequirementIsFulfilled = false
+      } else {
+        textRequirementIsFulfilled = true
       }
     }
     checkIfAllFieldsHaveBeenFulfilled()
@@ -148,7 +144,56 @@ class AddPalautteViewController: UIViewController, UITextFieldDelegate, UIPicker
   
   func saveToCoreData(){
     
+    let palautte = Palautte(context: context)
     
+    if let tempName = nameTextField.text {
+      palautte.name = tempName
+    }
+    
+    palautte.category = finalPalautteCategoryValue ?? ""
+    
+    
+    
+    let bgColor = BackgroundColor(context: context)
+    
+    
+    if let bgRed = transferredRedBackgroundColorValue {
+      bgColor.redValue = String(bgRed)
+    }
+  
+    if let bgGreen = transferredGreenBackgroundColorValue {
+      bgColor.greenValue = String(bgGreen)
+    }
+
+    if let bgBlue = transferredBlueBackgroundColorValue {
+      bgColor.blueValue = String(bgBlue)
+    }
+    
+    palautte.toBackgroundColor = bgColor
+    
+   
+    let fgColor = ForegroundColor(context: context)
+    
+    if let fgRed = transferredRedForegroundColorValue {
+      fgColor.redValue = String(fgRed)
+    }
+    
+    if let fgGreen = transferredGreenForegroundColorValue {
+      fgColor.greenValue = String(fgGreen)
+    }
+    
+    if let fgBlue = transferredBlueForegroundColorValue {
+      fgColor.blueValue = String(fgBlue)
+    }
+    
+    palautte.toForegroundColor = fgColor
+    
+    
+    
+    
+    ad.saveContext()
+    
+    performSegue(withIdentifier: "fromAddPalautteToSavedPalauttes", sender: self)
     
   }
   
@@ -157,24 +202,24 @@ class AddPalautteViewController: UIViewController, UITextFieldDelegate, UIPicker
   
   func setBackgroundAndForegroundCanvasColors() {
     
-    let RBGC = CGFloat(transferredRedBackgroundColorValue)
-    redBackgroundColorValue = RBGC/255.0
+    let RBGC = transferredRedBackgroundColorValue ?? 0.0
+    let redBackgroundColorValue = CGFloat(RBGC)/255.0
     
-    let GBGC = CGFloat(transferredGreenBackgroundColorValue)
-    greenBackgroundColorValue = GBGC/255.0
+    let GBGC = transferredGreenBackgroundColorValue ?? 0.0
+    let greenBackgroundColorValue = CGFloat(GBGC)/255.0
     
-    let BBGC = CGFloat(transferredBlueBackgroundColorValue)
-    blueBackgroundColorValue = BBGC/255.0
+    let BBGC = transferredBlueBackgroundColorValue ?? 0.0
+    let blueBackgroundColorValue = CGFloat(BBGC)/255.0
     
     
-    let RFGC = CGFloat(transferredRedForegroundColorValue)
-    redForegroundColorValue = RFGC/255.0
+    let RFGC = transferredRedForegroundColorValue ?? 0.0
+    let redForegroundColorValue = CGFloat(RFGC)/255.0
     
-    let GFGC = CGFloat(transferredGreenForegroundColorValue)
-    greenForegroundColorValue = GFGC/255.0
+    let GFGC = transferredGreenForegroundColorValue ?? 0.0
+    let greenForegroundColorValue = CGFloat(GFGC)/255.0
     
-    let BFGC = CGFloat(transferredBlueForegroundColorValue)
-    blueForegroundColorValue = BFGC/255.0
+    let BFGC = transferredBlueForegroundColorValue ?? 0.0
+    let blueForegroundColorValue = CGFloat(BFGC)/255.0
     
     
     backgroundCanvas.backgroundColor = UIColor(red: redBackgroundColorValue, green: greenBackgroundColorValue, blue: blueBackgroundColorValue, alpha: 1.0)
@@ -240,10 +285,8 @@ class AddPalautteViewController: UIViewController, UITextFieldDelegate, UIPicker
   }
   
   @IBAction func addPalautteButtonTapped(_ sender: UIButton) {
-    print("foo")
-    print(finalPalautteNameValue)
-    print("bar")
-    print(finalPalautteCategoryValue)
+
+    saveToCoreData()
   }
   
   

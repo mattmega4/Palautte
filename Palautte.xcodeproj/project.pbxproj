@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D5ABAE81E0BACAF0071E7FB /* SliderHolderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5ABAE71E0BACAF0071E7FB /* SliderHolderView.swift */; };
 		1DA83A0B1E0244C500BB5C30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA83A0A1E0244C500BB5C30 /* AppDelegate.swift */; };
 		1DA83A101E0244C500BB5C30 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DA83A0E1E0244C500BB5C30 /* Main.storyboard */; };
 		1DA83A151E0244C500BB5C30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DA83A141E0244C500BB5C30 /* Assets.xcassets */; };
@@ -30,6 +31,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1D5ABAE71E0BACAF0071E7FB /* SliderHolderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderHolderView.swift; sourceTree = "<group>"; };
 		1DA83A071E0244C500BB5C30 /* Palautte.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Palautte.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DA83A0A1E0244C500BB5C30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1DA83A0F1E0244C500BB5C30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				1DA83A0E1E0244C500BB5C30 /* Main.storyboard */,
 				1DA83A161E0244C500BB5C30 /* LaunchScreen.storyboard */,
 				1DA83A471E02474400BB5C30 /* View Extensions */,
+				1D5ABAE71E0BACAF0071E7FB /* SliderHolderView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 				1DA83A3F1E0246B500BB5C30 /* Palautte+CoreDataClass.swift in Sources */,
 				1DA83A211E02454C00BB5C30 /* LandingPageViewController.swift in Sources */,
 				1DA83A461E02473F00BB5C30 /* ShadowForAddPalautteTableViewCell.swift in Sources */,
+				1D5ABAE81E0BACAF0071E7FB /* SliderHolderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,6 +436,7 @@
 				1DA83A1E1E0244C500BB5C30 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
