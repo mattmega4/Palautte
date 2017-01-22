@@ -58,6 +58,10 @@ class AddPalautteViewController: UIViewController, UITextFieldDelegate, UIPicker
     
     navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white, NSFontAttributeName: UIFont(name: "Copperplate-Bold", size: 20)!]
     
+    if let topItem = self.navigationController?.navigationBar.topItem {
+      topItem.backBarButtonItem = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.plain, target: nil, action: nil)
+    }
+    
     self.nameTextField.delegate = self
     self.categoryPickerView.delegate = self
     self.categoryPickerView.dataSource = self
@@ -150,8 +154,7 @@ class AddPalautteViewController: UIViewController, UITextFieldDelegate, UIPicker
       palautte.name = tempName
     }
     
-    palautte.category = finalPalautteCategoryValue ?? ""
-    
+    palautte.category = pickerData[categoryPickerView.selectedRow(inComponent: 0)]
     
     
     let bgColor = BackgroundColor(context: context)
@@ -193,7 +196,11 @@ class AddPalautteViewController: UIViewController, UITextFieldDelegate, UIPicker
     
     ad.saveContext()
     
-    performSegue(withIdentifier: "fromAddPalautteToSavedPalauttes", sender: self)
+//    dismiss(animated: true, completion: nil)
+    
+    dismiss(animated: true) { 
+      self.tabBarController?.selectedIndex = 2
+    }
     
   }
   
