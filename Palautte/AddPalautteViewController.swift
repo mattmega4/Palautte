@@ -38,7 +38,7 @@ class AddPalautteViewController: UIViewController, UITextFieldDelegate, UIPicker
   var transferredRedForegroundColorValue: Float?
   var transferredGreenForegroundColorValue: Float?
   var transferredBlueForegroundColorValue: Float?
-
+  
   var finalPalautteNameValue: String?
   var finalPalautteCategoryValue: String?
   
@@ -163,18 +163,18 @@ class AddPalautteViewController: UIViewController, UITextFieldDelegate, UIPicker
     if let bgRed = transferredRedBackgroundColorValue {
       bgColor.redValue = String(bgRed)
     }
-  
+    
     if let bgGreen = transferredGreenBackgroundColorValue {
       bgColor.greenValue = String(bgGreen)
     }
-
+    
     if let bgBlue = transferredBlueBackgroundColorValue {
       bgColor.blueValue = String(bgBlue)
     }
     
     palautte.toBackgroundColor = bgColor
     
-   
+    
     let fgColor = ForegroundColor(context: context)
     
     if let fgRed = transferredRedForegroundColorValue {
@@ -191,16 +191,10 @@ class AddPalautteViewController: UIViewController, UITextFieldDelegate, UIPicker
     
     palautte.toForegroundColor = fgColor
     
-    
-    
-    
+
     ad.saveContext()
     
-//    dismiss(animated: true, completion: nil)
-    
-    dismiss(animated: true) { 
-      self.tabBarController?.selectedIndex = 2
-    }
+    dismiss(animated: true, completion: nil)
     
   }
   
@@ -292,7 +286,7 @@ class AddPalautteViewController: UIViewController, UITextFieldDelegate, UIPicker
   }
   
   @IBAction func addPalautteButtonTapped(_ sender: UIButton) {
-
+    
     saveToCoreData()
   }
   

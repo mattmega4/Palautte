@@ -32,8 +32,10 @@ class SavedPalauttesViewController: UIViewController{
     self.tableView.delegate = self
     self.tableView.dataSource = self
     
+    tabBarController?.selectedIndex = 1
+    
+    
     attemptFetch()
-//    generateTestData()
     
   }
   

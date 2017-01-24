@@ -93,6 +93,8 @@ class LandingPageViewController: UIViewController, UITextFieldDelegate {
     greenTextField.delegate = self
     blueTextField.delegate = self
     
+    tabBarController?.selectedIndex = 0
+    
     setBackgroundAndForegroundColors()
     
     // take all code starting here and eventually put into seperate file
