@@ -196,6 +196,10 @@ class AddPalautteViewController: UIViewController, UITextFieldDelegate, UIPicker
     
     dismiss(animated: true, completion: nil)
     
+    if let tabBarController = self.presentingViewController as? UITabBarController {
+      tabBarController.selectedIndex = 1
+    }
+    
   }
   
   
