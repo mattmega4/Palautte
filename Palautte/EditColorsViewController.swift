@@ -339,8 +339,6 @@ class EditColorsViewController: UIViewController, UITextFieldDelegate {
   }
   
   
-
-  
   func loadData() {
     
     if let item = palautteToEdit {
@@ -364,12 +362,10 @@ class EditColorsViewController: UIViewController, UITextFieldDelegate {
       let greenFore = CGFloat(currentGreenForegroundFloat!/255.0)
       let blueFore = CGFloat(currentBlueForegroundFloat!/255.0)
       
-      
       backgroundContainer.backgroundColor = UIColor.init(red: redBack, green: greenBack, blue: blueBack, alpha: 1.0)
       foregroundContainer.backgroundColor = UIColor.init(red: redFore, green: greenFore, blue: blueFore, alpha: 1.0)
       
     }
-    
   }
   
   
@@ -531,8 +527,7 @@ class EditColorsViewController: UIViewController, UITextFieldDelegate {
     
   }
   
-  
-  
+
   @IBAction func leftBarButtonTapped(_ sender: UIBarButtonItem) {
     
     dismiss(animated: true, completion: nil)

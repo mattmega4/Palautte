@@ -95,7 +95,7 @@ class AddPalautteViewController: UIViewController, UITextFieldDelegate, UIPicker
   }
   
   
-  //MARK: UITextField
+  // MARK: UITextField
   
   func checkIfTextFieldIsTwentyCharactersOrLess(textField: UITextField) {
     if textField == nameTextField{

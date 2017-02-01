@@ -33,12 +33,14 @@ class SavedPalauttesViewController: UIViewController{
     tabBarController?.selectedIndex = 1
     
     
-    attemptFetch()
     
   }
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
+    
+    
+    attemptFetch()
     
   }
   
@@ -61,11 +63,16 @@ class SavedPalauttesViewController: UIViewController{
     }
   }
   
+  
   // MARK: IBActions
   
-  @IBAction func editNavBarButtonTapped(_ sender: UIBarButtonItem) {
+  @IBAction func segmentChanged(_ sender: UISegmentedControl) {
+    
+    attemptFetch()
+    tableView.reloadData()
     
   }
+  
   
 } // End of SavedPalauttesViewController Class
 
@@ -202,8 +209,18 @@ extension SavedPalauttesViewController: NSFetchedResultsControllerDelegate {
     
     let fetchRequest: NSFetchRequest<Palautte> = Palautte.fetchRequest()
     
-    let nameSort = NSSortDescriptor(key: "name", ascending: false)
-    fetchRequest.sortDescriptors = [nameSort]
+    let nameSort = NSSortDescriptor(key: "name", ascending: true)
+    let categorySort = NSSortDescriptor(key: "category", ascending: true)
+    
+    if segmentedControl.selectedSegmentIndex == 0 {
+      
+      fetchRequest.sortDescriptors = [nameSort]
+ 
+    } else if segmentedControl.selectedSegmentIndex == 1 {
+      
+      fetchRequest.sortDescriptors = [categorySort]
+      
+    }
     
     let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
     
@@ -222,9 +239,9 @@ extension SavedPalauttesViewController: NSFetchedResultsControllerDelegate {
       
     }
     
-
-    
-    
   }
+  
+
+  
   
 }
