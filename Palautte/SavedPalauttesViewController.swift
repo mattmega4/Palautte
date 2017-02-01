@@ -11,8 +11,6 @@ import CoreData
 
 class SavedPalauttesViewController: UIViewController{
   
-  @IBOutlet weak var editNavBarButton: UIBarButtonItem!
-  
   @IBOutlet weak var scrollView: UIScrollView!
   @IBOutlet weak var contentView: UIView!
   
@@ -43,7 +41,25 @@ class SavedPalauttesViewController: UIViewController{
     super.viewWillAppear(animated)
     
   }
+  
+  
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     
+    if segue.identifier == "fromSavedToEditColors" {
+      
+      if let controller = segue.destination as? UINavigationController {
+        
+        if let destinationVC = controller.topViewController as? EditColorsViewController {
+          
+          if let item = sender as? Palautte {
+            
+            destinationVC.palautteToEdit = item
+            
+          }
+        }
+      }
+    }
+  }
   
   // MARK: IBActions
   
@@ -59,14 +75,24 @@ class SavedPalauttesViewController: UIViewController{
 extension SavedPalauttesViewController: UITableViewDelegate {
   
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    
     return 143
+    
   }
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    //
+   
+    if let objs = controller.fetchedObjects, objs.count > 0 {
+      
+      let item = objs[indexPath.row]
+      performSegue(withIdentifier: "fromSavedToEditColors", sender: item)
+      
+    }
   }
-  
 }
+
+
+
 
 
 // MARK: UITableViewDataSource Methods
@@ -74,30 +100,46 @@ extension SavedPalauttesViewController: UITableViewDelegate {
 extension SavedPalauttesViewController: UITableViewDataSource {
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    
     let cell = tableView.dequeueReusableCell(withIdentifier: "palautteCell", for: indexPath) as! LocalPalautteTableViewCell
     configureCell(cell: cell, indexPath: indexPath as NSIndexPath)
+    
     return cell
+    
   }
   
   func configureCell(cell: LocalPalautteTableViewCell, indexPath: NSIndexPath) {
+    
     let palautte = controller.object(at: indexPath as IndexPath)
     cell.configureCell(palautte: palautte)
+    
   }
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    
     if let sections = controller.sections {
+      
       let sectionInfo = sections[section]
       return sectionInfo.numberOfObjects
+      
     }
+    
     return 0
+    
   }
   
   func numberOfSections(in tableView: UITableView) -> Int {
+    
     if let sections = controller.sections {
+      
       return sections.count
+      
     }
+    
     return 0
+    
   }
+  
   
 }
 

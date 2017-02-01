@@ -302,7 +302,7 @@ class AddPalautteViewController: UIViewController, UITextFieldDelegate, UIPicker
     var keyboardFrame:CGRect = (userInfo[UIKeyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
     keyboardFrame = self.view.convert(keyboardFrame, from: nil)
     var contentInset: UIEdgeInsets = self.scrollView.contentInset
-    contentInset.bottom = keyboardFrame.size.height
+    contentInset.bottom = keyboardFrame.size.height + 30
     self.scrollView.contentInset = contentInset
     categoryPickerView.isUserInteractionEnabled = false
   }

@@ -306,16 +306,12 @@ class LandingPageViewController: UIViewController, UITextFieldDelegate {
       redTextField.text = currentRedBackgroundString
       greenTextField.text = currentGreenBackgroundString
       blueTextField.text = currentBlueBackgroundString
-      redSlider.setValue(Float(currentRedBackgroundString)!, animated: true)
-      greenSlider.setValue(Float(currentGreenBackgroundString)!, animated: true)
-      blueSlider.setValue(Float(currentBlueBackgroundString)!, animated: true)
+
     } else if !isBackgroundColorInFocus {
       redTextField.text = currentRedForegroundString
       greenTextField.text = currentGreenForegroundString
       blueTextField.text = currentBlueForegroundString
-      redSlider.setValue(Float(currentRedForegroundString)!, animated: true)
-      greenSlider.setValue(Float(currentGreenForegroundString)!, animated: true)
-      blueSlider.setValue(Float(currentBlueForegroundString)!, animated: true)
+
     }
   }
   
@@ -547,7 +543,7 @@ class LandingPageViewController: UIViewController, UITextFieldDelegate {
     var keyboardFrame:CGRect = (userInfo[UIKeyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
     keyboardFrame = self.view.convert(keyboardFrame, from: nil)
     var contentInset: UIEdgeInsets = self.scrollView.contentInset
-    contentInset.bottom = keyboardFrame.size.height
+    contentInset.bottom = keyboardFrame.size.height + 30
     self.scrollView.contentInset = contentInset
   }
   

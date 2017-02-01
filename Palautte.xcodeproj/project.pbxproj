@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1D5ABAE81E0BACAF0071E7FB /* SliderHolderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5ABAE71E0BACAF0071E7FB /* SliderHolderView.swift */; };
 		1DA83A0B1E0244C500BB5C30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA83A0A1E0244C500BB5C30 /* AppDelegate.swift */; };
 		1DA83A101E0244C500BB5C30 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DA83A0E1E0244C500BB5C30 /* Main.storyboard */; };
 		1DA83A151E0244C500BB5C30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DA83A141E0244C500BB5C30 /* Assets.xcassets */; };
@@ -17,7 +16,6 @@
 		1DA83A241E02456100BB5C30 /* SavedPalauttesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA83A231E02456100BB5C30 /* SavedPalauttesViewController.swift */; };
 		1DA83A261E02456700BB5C30 /* LocalPalautteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA83A251E02456700BB5C30 /* LocalPalautteTableViewCell.swift */; };
 		1DA83A291E02457100BB5C30 /* EditColorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA83A271E02457100BB5C30 /* EditColorsViewController.swift */; };
-		1DA83A2A1E02457100BB5C30 /* EditDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA83A281E02457100BB5C30 /* EditDetailsViewController.swift */; };
 		1DA83A2C1E0245A300BB5C30 /* Palautte.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 1DA83A2B1E0245A300BB5C30 /* Palautte.xcdatamodel */; };
 		1DA83A3D1E0246B500BB5C30 /* BackgroundColor+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA83A351E0246B500BB5C30 /* BackgroundColor+CoreDataClass.swift */; };
 		1DA83A3E1E0246B500BB5C30 /* BackgroundColor+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA83A361E0246B500BB5C30 /* BackgroundColor+CoreDataProperties.swift */; };
@@ -31,7 +29,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1D5ABAE71E0BACAF0071E7FB /* SliderHolderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderHolderView.swift; sourceTree = "<group>"; };
 		1DA83A071E0244C500BB5C30 /* Palautte.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Palautte.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DA83A0A1E0244C500BB5C30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1DA83A0F1E0244C500BB5C30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -43,7 +40,6 @@
 		1DA83A231E02456100BB5C30 /* SavedPalauttesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedPalauttesViewController.swift; sourceTree = "<group>"; };
 		1DA83A251E02456700BB5C30 /* LocalPalautteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalPalautteTableViewCell.swift; sourceTree = "<group>"; };
 		1DA83A271E02457100BB5C30 /* EditColorsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditColorsViewController.swift; sourceTree = "<group>"; };
-		1DA83A281E02457100BB5C30 /* EditDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditDetailsViewController.swift; sourceTree = "<group>"; };
 		1DA83A2B1E0245A300BB5C30 /* Palautte.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Palautte.xcdatamodel; sourceTree = "<group>"; };
 		1DA83A351E0246B500BB5C30 /* BackgroundColor+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BackgroundColor+CoreDataClass.swift"; sourceTree = "<group>"; };
 		1DA83A361E0246B500BB5C30 /* BackgroundColor+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BackgroundColor+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -120,7 +116,6 @@
 				1DA83A0E1E0244C500BB5C30 /* Main.storyboard */,
 				1DA83A161E0244C500BB5C30 /* LaunchScreen.storyboard */,
 				1DA83A471E02474400BB5C30 /* View Extensions */,
-				1D5ABAE71E0BACAF0071E7FB /* SliderHolderView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -171,7 +166,6 @@
 			isa = PBXGroup;
 			children = (
 				1DA83A271E02457100BB5C30 /* EditColorsViewController.swift */,
-				1DA83A281E02457100BB5C30 /* EditDetailsViewController.swift */,
 			);
 			name = "Edit Cell";
 			sourceTree = "<group>";
@@ -265,7 +259,6 @@
 				1DA83A2C1E0245A300BB5C30 /* Palautte.xcdatamodel in Sources */,
 				1DA83A291E02457100BB5C30 /* EditColorsViewController.swift in Sources */,
 				1DA83A221E02454C00BB5C30 /* AddPalautteViewController.swift in Sources */,
-				1DA83A2A1E02457100BB5C30 /* EditDetailsViewController.swift in Sources */,
 				1DA83A261E02456700BB5C30 /* LocalPalautteTableViewCell.swift in Sources */,
 				1DA83A441E0246B500BB5C30 /* Online+CoreDataProperties.swift in Sources */,
 				1DA83A241E02456100BB5C30 /* SavedPalauttesViewController.swift in Sources */,
@@ -274,7 +267,6 @@
 				1DA83A3F1E0246B500BB5C30 /* Palautte+CoreDataClass.swift in Sources */,
 				1DA83A211E02454C00BB5C30 /* LandingPageViewController.swift in Sources */,
 				1DA83A461E02473F00BB5C30 /* ShadowForAddPalautteTableViewCell.swift in Sources */,
-				1D5ABAE81E0BACAF0071E7FB /* SliderHolderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
