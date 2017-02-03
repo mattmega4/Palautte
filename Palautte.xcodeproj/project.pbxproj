@@ -14,6 +14,19 @@
 		1DA83A211E02454C00BB5C30 /* LandingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA83A1F1E02454C00BB5C30 /* LandingPageViewController.swift */; };
 		1DA83A2C1E0245A300BB5C30 /* Palautte.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 1DA83A2B1E0245A300BB5C30 /* Palautte.xcdatamodel */; };
 		1DA83A461E02473F00BB5C30 /* ShadowForAddPalautteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA83A451E02473F00BB5C30 /* ShadowForAddPalautteTableViewCell.swift */; };
+		1DBEDFB81E44885600344695 /* Palautte+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBEDFAC1E44885600344695 /* Palautte+CoreDataClass.swift */; };
+		1DBEDFB91E44885600344695 /* Palautte+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBEDFAD1E44885600344695 /* Palautte+CoreDataProperties.swift */; };
+		1DBEDFBA1E44885600344695 /* FirstColor+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBEDFAE1E44885600344695 /* FirstColor+CoreDataClass.swift */; };
+		1DBEDFBB1E44885600344695 /* FirstColor+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBEDFAF1E44885600344695 /* FirstColor+CoreDataProperties.swift */; };
+		1DBEDFBC1E44885600344695 /* FifthColor+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBEDFB01E44885600344695 /* FifthColor+CoreDataClass.swift */; };
+		1DBEDFBD1E44885600344695 /* FifthColor+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBEDFB11E44885600344695 /* FifthColor+CoreDataProperties.swift */; };
+		1DBEDFBE1E44885600344695 /* FourthColor+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBEDFB21E44885600344695 /* FourthColor+CoreDataClass.swift */; };
+		1DBEDFBF1E44885600344695 /* FourthColor+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBEDFB31E44885600344695 /* FourthColor+CoreDataProperties.swift */; };
+		1DBEDFC01E44885600344695 /* ThirdColor+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBEDFB41E44885600344695 /* ThirdColor+CoreDataClass.swift */; };
+		1DBEDFC11E44885600344695 /* ThirdColor+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBEDFB51E44885600344695 /* ThirdColor+CoreDataProperties.swift */; };
+		1DBEDFC21E44885600344695 /* SecondColor+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBEDFB61E44885600344695 /* SecondColor+CoreDataClass.swift */; };
+		1DBEDFC31E44885600344695 /* SecondColor+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBEDFB71E44885600344695 /* SecondColor+CoreDataProperties.swift */; };
+		1DBEDFC91E44897500344695 /* General+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBEDFC81E44897500344695 /* General+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +39,19 @@
 		1DA83A1F1E02454C00BB5C30 /* LandingPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingPageViewController.swift; sourceTree = "<group>"; };
 		1DA83A2B1E0245A300BB5C30 /* Palautte.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Palautte.xcdatamodel; sourceTree = "<group>"; };
 		1DA83A451E02473F00BB5C30 /* ShadowForAddPalautteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowForAddPalautteTableViewCell.swift; sourceTree = "<group>"; };
+		1DBEDFAC1E44885600344695 /* Palautte+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Palautte+CoreDataClass.swift"; sourceTree = "<group>"; };
+		1DBEDFAD1E44885600344695 /* Palautte+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Palautte+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		1DBEDFAE1E44885600344695 /* FirstColor+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FirstColor+CoreDataClass.swift"; sourceTree = "<group>"; };
+		1DBEDFAF1E44885600344695 /* FirstColor+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FirstColor+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		1DBEDFB01E44885600344695 /* FifthColor+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FifthColor+CoreDataClass.swift"; sourceTree = "<group>"; };
+		1DBEDFB11E44885600344695 /* FifthColor+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FifthColor+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		1DBEDFB21E44885600344695 /* FourthColor+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FourthColor+CoreDataClass.swift"; sourceTree = "<group>"; };
+		1DBEDFB31E44885600344695 /* FourthColor+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FourthColor+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		1DBEDFB41E44885600344695 /* ThirdColor+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ThirdColor+CoreDataClass.swift"; sourceTree = "<group>"; };
+		1DBEDFB51E44885600344695 /* ThirdColor+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ThirdColor+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		1DBEDFB61E44885600344695 /* SecondColor+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SecondColor+CoreDataClass.swift"; sourceTree = "<group>"; };
+		1DBEDFB71E44885600344695 /* SecondColor+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SecondColor+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		1DBEDFC81E44897500344695 /* General+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "General+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +87,7 @@
 				1DA83A301E0245B700BB5C30 /* Model */,
 				1DA83A2F1E0245B400BB5C30 /* View */,
 				1DA83A2E1E0245B200BB5C30 /* Controller */,
+				1DBEDFC71E44894200344695 /* Extensions */,
 				1DA83A2D1E0245AF00BB5C30 /* Additional Files */,
 			);
 			path = Palautte;
@@ -98,7 +125,9 @@
 		1DA83A301E0245B700BB5C30 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				1DA83A2B1E0245A300BB5C30 /* Palautte.xcdatamodel */,
+				1DBEDFC51E44889700344695 /* XCDataModel File */,
+				1DBEDFC61E4488CC00344695 /* Core Data Properties */,
+				1DBEDFC41E44889200344695 /* Core Data Classes */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -116,6 +145,48 @@
 				1DA83A451E02473F00BB5C30 /* ShadowForAddPalautteTableViewCell.swift */,
 			);
 			name = "View Extensions";
+			sourceTree = "<group>";
+		};
+		1DBEDFC41E44889200344695 /* Core Data Classes */ = {
+			isa = PBXGroup;
+			children = (
+				1DBEDFAC1E44885600344695 /* Palautte+CoreDataClass.swift */,
+				1DBEDFAE1E44885600344695 /* FirstColor+CoreDataClass.swift */,
+				1DBEDFB01E44885600344695 /* FifthColor+CoreDataClass.swift */,
+				1DBEDFB21E44885600344695 /* FourthColor+CoreDataClass.swift */,
+				1DBEDFB41E44885600344695 /* ThirdColor+CoreDataClass.swift */,
+				1DBEDFB61E44885600344695 /* SecondColor+CoreDataClass.swift */,
+			);
+			name = "Core Data Classes";
+			sourceTree = "<group>";
+		};
+		1DBEDFC51E44889700344695 /* XCDataModel File */ = {
+			isa = PBXGroup;
+			children = (
+				1DA83A2B1E0245A300BB5C30 /* Palautte.xcdatamodel */,
+			);
+			name = "XCDataModel File";
+			sourceTree = "<group>";
+		};
+		1DBEDFC61E4488CC00344695 /* Core Data Properties */ = {
+			isa = PBXGroup;
+			children = (
+				1DBEDFAD1E44885600344695 /* Palautte+CoreDataProperties.swift */,
+				1DBEDFAF1E44885600344695 /* FirstColor+CoreDataProperties.swift */,
+				1DBEDFB11E44885600344695 /* FifthColor+CoreDataProperties.swift */,
+				1DBEDFB31E44885600344695 /* FourthColor+CoreDataProperties.swift */,
+				1DBEDFB51E44885600344695 /* ThirdColor+CoreDataProperties.swift */,
+				1DBEDFB71E44885600344695 /* SecondColor+CoreDataProperties.swift */,
+			);
+			name = "Core Data Properties";
+			sourceTree = "<group>";
+		};
+		1DBEDFC71E44894200344695 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1DBEDFC81E44897500344695 /* General+Extensions.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,10 +262,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DBEDFBB1E44885600344695 /* FirstColor+CoreDataProperties.swift in Sources */,
+				1DBEDFBF1E44885600344695 /* FourthColor+CoreDataProperties.swift in Sources */,
 				1DA83A2C1E0245A300BB5C30 /* Palautte.xcdatamodel in Sources */,
+				1DBEDFB91E44885600344695 /* Palautte+CoreDataProperties.swift in Sources */,
+				1DBEDFBD1E44885600344695 /* FifthColor+CoreDataProperties.swift in Sources */,
+				1DBEDFC91E44897500344695 /* General+Extensions.swift in Sources */,
+				1DBEDFC31E44885600344695 /* SecondColor+CoreDataProperties.swift in Sources */,
+				1DBEDFBA1E44885600344695 /* FirstColor+CoreDataClass.swift in Sources */,
+				1DBEDFBE1E44885600344695 /* FourthColor+CoreDataClass.swift in Sources */,
+				1DBEDFC11E44885600344695 /* ThirdColor+CoreDataProperties.swift in Sources */,
 				1DA83A0B1E0244C500BB5C30 /* AppDelegate.swift in Sources */,
+				1DBEDFC21E44885600344695 /* SecondColor+CoreDataClass.swift in Sources */,
+				1DBEDFB81E44885600344695 /* Palautte+CoreDataClass.swift in Sources */,
+				1DBEDFC01E44885600344695 /* ThirdColor+CoreDataClass.swift in Sources */,
 				1DA83A211E02454C00BB5C30 /* LandingPageViewController.swift in Sources */,
 				1DA83A461E02473F00BB5C30 /* ShadowForAddPalautteTableViewCell.swift in Sources */,
+				1DBEDFBC1E44885600344695 /* FifthColor+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

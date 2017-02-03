@@ -53,54 +53,42 @@ class LandingPageViewController: UIViewController, UITextFieldDelegate {
   
   @IBOutlet weak var sliderOrWheelContainerView: UIView!
 
-  
   let redSlider = UISlider()
   let greenSlider = UISlider()
   let blueSlider = UISlider()
   
   var textFieldArray: [UITextField] = []
+  var indicatorViewArray: [UIView] = []
+  
+  var firstColorIsActive: Bool?
+  var secondColorIsActive: Bool?
+  var thirdColorIsActive: Bool?
+  var fourthColorIsActive: Bool?
+  var fifthColorIsActive: Bool?
 
   
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    title = "Create Palautte"
-    UINavigationBar.appearance().barTintColor = UIColor(red: 50.0/255.0, green: 60.0/255.0, blue: 80.0/255.0, alpha: 1.0)
-    UINavigationBar.appearance().tintColor = .white
-    UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.white]
-    navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white, NSFontAttributeName: UIFont(name: "Copperplate-Bold", size: 20)!]
+    tabBarController?.selectedIndex = 0
     
-
     redTextField.delegate = self
     greenTextField.delegate = self
     blueTextField.delegate = self
     
-    tabBarController?.selectedIndex = 0
-    
+    setNavBar()
+    populateArrayAndAddTargets()
 
-    
-    redSlider.minimumTrackTintColor = UIColor(red: 255.0/255.0, green: 0.0/255.0, blue: 0.0/255.0, alpha: 1.0)
-    greenSlider.minimumTrackTintColor = UIColor(red: 0.0/255.0, green: 255.0/255.0, blue: 0.0/255.0, alpha: 1.0)
-    blueSlider.minimumTrackTintColor = UIColor(red: 0.0/255.0, green: 0.0/255.0, blue: 255.0/255.0, alpha: 1.0)
-    
-    textFieldArray+=[redTextField, greenTextField, blueTextField]
-    
-//    for textField in textFieldArray {
-//      textField.addTarget(self, action: #selector(textFieldTextChecker(textField:)), for: .editingChanged)
-//    }
-    
-
-//    
-//    redSlider.addTarget(self, action: #selector(redSliderAction(sender:)), for: .valueChanged)
-//    greenSlider.addTarget(self, action: #selector(greenSliderAction(sender:)), for: .valueChanged)
-//    blueSlider.addTarget(self, action: #selector(blueSliderAction(sender:)), for: .valueChanged)
-    
-    
     let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(LandingPageViewController.dismissKeyboard))
     view.addGestureRecognizer(tap)
     
     NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name:NSNotification.Name.UIKeyboardWillShow, object: nil)
     NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name:NSNotification.Name.UIKeyboardWillHide, object: nil)
+    
+    // temp
+    useSliders()
+    // temp
+    
   }
   
   override func viewWillAppear(_ animated: Bool) {
@@ -111,73 +99,119 @@ class LandingPageViewController: UIViewController, UITextFieldDelegate {
   }
   
   
-  func useSliders() {
+  // MARK: Nav Bar & View Design
+  
+  func setNavBar() {
     
-    let leftHiddenView = UIView()
-    let centerHiddenView = UIView()
-    let rightHiddenView = UIView()
+    title = "Create Palautte"
+    UINavigationBar.appearance().barTintColor = UIColor(red: 50.0/255.0, green: 60.0/255.0, blue: 80.0/255.0, alpha: 1.0)
+    UINavigationBar.appearance().tintColor = .white
+    UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.white]
+    navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white, NSFontAttributeName: UIFont(name: "Copperplate-Bold", size: 20)!]
     
-    let hiddenViews = [leftHiddenView, centerHiddenView, rightHiddenView]
-    var allHiddenViewConstraints: [NSLayoutConstraint] = []
+  }
+  
+  func turnIndicatorViewsRound() {
     
-    for views in hiddenViews {
+    indicatorViewArray+=[firstIndicatorView, secondIndicatorView, thirdIndicatorView, fourthIndicatorView, fifthIndicatorView]
+    
+    for views in indicatorViewArray {
+      views.backgroundColor = .white
+      views.createRoundView()
+    }
+    
+  }
+  
+  
+  // MARK: Arrays and Targets
+  
+  func populateArrayAndAddTargets() {
+    
+    textFieldArray+=[redTextField, greenTextField, blueTextField]
+
+    //    for textField in textFieldArray {
+    //      textField.addTarget(self, action: #selector(textFieldTextChecker(textField:)), for: .editingChanged)
+    //    }
+
+    //    redSlider.addTarget(self, action: #selector(redSliderAction(sender:)), for: .valueChanged)
+    //    greenSlider.addTarget(self, action: #selector(greenSliderAction(sender:)), for: .valueChanged)
+    //    blueSlider.addTarget(self, action: #selector(blueSliderAction(sender:)), for: .valueChanged)
+    
+  }
+  
+
+  // MARK: Color Button Functions
+  
+  func setColorBool(button: UIButton) {
+    
+    if button == firstColorButton {
       
-      sliderOrWheelContainerView.addSubview(views)
-      views.backgroundColor = .clear
-      views.translatesAutoresizingMaskIntoConstraints = false
+      firstColorIsActive = true
+      secondColorIsActive = false
+      thirdColorIsActive = false
+      fourthColorIsActive = false
+      fifthColorIsActive = false
       
-      let hiddenViewWidthConstraint = views.widthAnchor.constraint(equalToConstant: 35)
-      let hiddenViewHeightConstraint = views.heightAnchor.constraint(equalToConstant: 5)
+    } else if button == secondColorButton {
       
-      NSLayoutConstraint.activate([hiddenViewWidthConstraint, hiddenViewHeightConstraint])
+      firstColorIsActive = false
+      secondColorIsActive = true
+      thirdColorIsActive = false
+      fourthColorIsActive = false
+      fifthColorIsActive = false
+      
+    } else if button == thirdColorButton {
+      
+      firstColorIsActive = false
+      secondColorIsActive = false
+      thirdColorIsActive = true
+      fourthColorIsActive = false
+      fifthColorIsActive = false
+      
+    } else if button == fourthColorButton {
+      
+      firstColorIsActive = false
+      secondColorIsActive = false
+      thirdColorIsActive = false
+      fourthColorIsActive = true
+      fifthColorIsActive = false
+      
+    } else if button == fifthColorButton {
+      
+      firstColorIsActive = false
+      secondColorIsActive = false
+      thirdColorIsActive = false
+      fourthColorIsActive = false
+      fifthColorIsActive = true
       
     }
     
-    let leftViewVerticalCenterConstraint = leftHiddenView.centerYAnchor.constraint(equalTo: centerHiddenView.centerYAnchor, constant: 0)
-    let leftViewTrailingConstraint = leftHiddenView.trailingAnchor.constraint(equalTo: centerHiddenView.leadingAnchor, constant: -60)
+    // run check function
     
-    let centerViewHorizontalConstraint = centerHiddenView.centerXAnchor.constraint(equalTo: sliderOrWheelContainerView.centerXAnchor)
-    let centerViewTopConstraint = centerHiddenView.topAnchor.constraint(equalTo: sliderOrWheelContainerView.topAnchor, constant: 50)
+  }
+  
+  
+  func doStuff() {
     
-    let rightViewVerticalCenterConstraint = rightHiddenView.centerYAnchor.constraint(equalTo: centerHiddenView.centerYAnchor, constant: 0)
-    let rightViewTrailingConstraint = rightHiddenView.leadingAnchor.constraint(equalTo: centerHiddenView.trailingAnchor, constant: 60)
-    
-    allHiddenViewConstraints+=[leftViewVerticalCenterConstraint,
-                               leftViewTrailingConstraint,
-                               centerViewHorizontalConstraint,
-                               centerViewTopConstraint,
-                               rightViewVerticalCenterConstraint,
-                               rightViewTrailingConstraint]
-    
-    NSLayoutConstraint.activate(allHiddenViewConstraints)
-    
-    
-    // Mark: Slider View
-    
-    let colorSliders = [redSlider, greenSlider, blueSlider]
-    
-    var constraints: [NSLayoutConstraint] = []
-    
-    for slider in colorSliders {
-      slider.translatesAutoresizingMaskIntoConstraints = false
-      sliderOrWheelContainerView.addSubview(slider)
-      slider.transform = CGAffineTransform(rotationAngle: CGFloat(-M_PI_2))
-      slider.minimumValue = 0
-      slider.maximumValue = 255
-      slider.isEnabled = true
-      slider.isUserInteractionEnabled = true
-      constraints.append(slider.widthAnchor.constraint(equalTo: sliderOrWheelContainerView.heightAnchor))
-      constraints.append(slider.centerYAnchor.constraint(equalTo: sliderOrWheelContainerView.centerYAnchor))
-      
-    }
-    constraints.append(redSlider.centerXAnchor.constraint(equalTo: leftHiddenView.centerXAnchor))
-    constraints.append(greenSlider.centerXAnchor.constraint(equalTo: sliderOrWheelContainerView.centerXAnchor))
-    constraints.append(blueSlider.centerXAnchor.constraint(equalTo: rightHiddenView.centerXAnchor))
-    
-    NSLayoutConstraint.activate(constraints)
     
     
   }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
 
   
@@ -361,6 +395,84 @@ class LandingPageViewController: UIViewController, UITextFieldDelegate {
 //    
 //  }
   
+  
+  
+  
+  
+  
+  
+  
+  
+  // MARK: Slider View
+  
+  func useSliders() {
+    
+    let leftHiddenView = UIView()
+    let centerHiddenView = UIView()
+    let rightHiddenView = UIView()
+    
+    redSlider.minimumTrackTintColor = UIColor(red: 255.0/255.0, green: 0.0/255.0, blue: 0.0/255.0, alpha: 1.0)
+    greenSlider.minimumTrackTintColor = UIColor(red: 0.0/255.0, green: 255.0/255.0, blue: 0.0/255.0, alpha: 1.0)
+    blueSlider.minimumTrackTintColor = UIColor(red: 0.0/255.0, green: 0.0/255.0, blue: 255.0/255.0, alpha: 1.0)
+    
+    let hiddenViews = [leftHiddenView, centerHiddenView, rightHiddenView]
+    var allHiddenViewConstraints: [NSLayoutConstraint] = []
+    
+    for views in hiddenViews {
+      
+      sliderOrWheelContainerView.addSubview(views)
+      views.backgroundColor = .clear
+      views.translatesAutoresizingMaskIntoConstraints = false
+      
+      let hiddenViewWidthConstraint = views.widthAnchor.constraint(equalToConstant: 35)
+      let hiddenViewHeightConstraint = views.heightAnchor.constraint(equalToConstant: 5)
+      
+      NSLayoutConstraint.activate([hiddenViewWidthConstraint, hiddenViewHeightConstraint])
+      
+    }
+    
+    let leftViewVerticalCenterConstraint = leftHiddenView.centerYAnchor.constraint(equalTo: centerHiddenView.centerYAnchor, constant: 0)
+    let leftViewTrailingConstraint = leftHiddenView.trailingAnchor.constraint(equalTo: centerHiddenView.leadingAnchor, constant: -60)
+    
+    let centerViewHorizontalConstraint = centerHiddenView.centerXAnchor.constraint(equalTo: sliderOrWheelContainerView.centerXAnchor)
+    let centerViewTopConstraint = centerHiddenView.topAnchor.constraint(equalTo: sliderOrWheelContainerView.topAnchor, constant: 50)
+    
+    let rightViewVerticalCenterConstraint = rightHiddenView.centerYAnchor.constraint(equalTo: centerHiddenView.centerYAnchor, constant: 0)
+    let rightViewTrailingConstraint = rightHiddenView.leadingAnchor.constraint(equalTo: centerHiddenView.trailingAnchor, constant: 60)
+    
+    allHiddenViewConstraints+=[leftViewVerticalCenterConstraint,
+                               leftViewTrailingConstraint,
+                               centerViewHorizontalConstraint,
+                               centerViewTopConstraint,
+                               rightViewVerticalCenterConstraint,
+                               rightViewTrailingConstraint]
+    
+    NSLayoutConstraint.activate(allHiddenViewConstraints)
+    
+    let colorSliders = [redSlider, greenSlider, blueSlider]
+    
+    var constraints: [NSLayoutConstraint] = []
+    
+    for slider in colorSliders {
+      slider.translatesAutoresizingMaskIntoConstraints = false
+      sliderOrWheelContainerView.addSubview(slider)
+      slider.transform = CGAffineTransform(rotationAngle: CGFloat(-M_PI_2))
+      slider.minimumValue = 0
+      slider.maximumValue = 255
+      slider.isEnabled = true
+      slider.isUserInteractionEnabled = true
+      constraints.append(slider.widthAnchor.constraint(equalTo: sliderOrWheelContainerView.heightAnchor))
+      constraints.append(slider.centerYAnchor.constraint(equalTo: sliderOrWheelContainerView.centerYAnchor))
+      
+    }
+    constraints.append(redSlider.centerXAnchor.constraint(equalTo: leftHiddenView.centerXAnchor))
+    constraints.append(greenSlider.centerXAnchor.constraint(equalTo: sliderOrWheelContainerView.centerXAnchor))
+    constraints.append(blueSlider.centerXAnchor.constraint(equalTo: rightHiddenView.centerXAnchor))
+    
+    NSLayoutConstraint.activate(constraints)
+    
+  }
+
   
   // MARK: Keyboard Methods
   

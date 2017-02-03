@@ -1,45 +1,50 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11759" systemVersion="16D32" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="FifthColor" representedClassName="FifthColor" syncable="YES" codeGenerationType="class">
+    <entity name="FifthColor" representedClassName="FifthColor" syncable="YES">
         <attribute name="blueValue" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="greenValue" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="redValue" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="toPalautte" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Palautte" inverseName="toFifthColor" inverseEntity="Palautte" syncable="YES"/>
     </entity>
-    <entity name="FirstColor" representedClassName="FirstColor" syncable="YES" codeGenerationType="class">
+    <entity name="FirstColor" representedClassName="FirstColor" syncable="YES">
         <attribute name="blueValue" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="greenValue" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="redValue" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="toPalautte" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Palautte" inverseName="toFirstColor" inverseEntity="Palautte" syncable="YES"/>
     </entity>
-    <entity name="FourthColor" representedClassName="FourthColor" syncable="YES" codeGenerationType="class">
+    <entity name="FourthColor" representedClassName="FourthColor" syncable="YES">
         <attribute name="blueValue" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="greenValue" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="redValue" optional="YES" attributeType="String" syncable="YES"/>
-    </entity>
-    <entity name="Online" representedClassName="Online" syncable="YES">
-        <attribute name="isOnline" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
-        <relationship name="toPalautte" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Palautte" syncable="YES"/>
+        <relationship name="toPalautte" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Palautte" inverseName="toFourthColor" inverseEntity="Palautte" syncable="YES"/>
     </entity>
     <entity name="Palautte" representedClassName="Palautte" syncable="YES">
         <attribute name="category" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="toFifthColor" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FifthColor" inverseName="toPalautte" inverseEntity="FifthColor" syncable="YES"/>
+        <relationship name="toFirstColor" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FirstColor" inverseName="toPalautte" inverseEntity="FirstColor" syncable="YES"/>
+        <relationship name="toFourthColor" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FourthColor" inverseName="toPalautte" inverseEntity="FourthColor" syncable="YES"/>
+        <relationship name="toSecondColor" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SecondColor" inverseName="toPalautte" inverseEntity="SecondColor" syncable="YES"/>
+        <relationship name="toThirdColor" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ThirdColor" inverseName="toPalautte" inverseEntity="ThirdColor" syncable="YES"/>
     </entity>
-    <entity name="SecondColor" representedClassName="SecondColor" syncable="YES" codeGenerationType="class">
+    <entity name="SecondColor" representedClassName="SecondColor" syncable="YES">
         <attribute name="blueValue" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="greenValue" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="redValue" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="toPalautte" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Palautte" inverseName="toSecondColor" inverseEntity="Palautte" syncable="YES"/>
     </entity>
-    <entity name="ThirdColor" representedClassName="ThirdColor" syncable="YES" codeGenerationType="class">
+    <entity name="ThirdColor" representedClassName="ThirdColor" syncable="YES">
         <attribute name="blueValue" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="greenValue" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="redValue" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="toPalautte" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Palautte" inverseName="toThirdColor" inverseEntity="Palautte" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Online" positionX="-74" positionY="-273" width="128" height="75"/>
-        <element name="Palautte" positionX="-324" positionY="-318" width="128" height="75"/>
-        <element name="FourthColor" positionX="-198" positionY="-270" width="128" height="90"/>
-        <element name="ThirdColor" positionX="-189" positionY="-261" width="128" height="90"/>
-        <element name="FifthColor" positionX="-180" positionY="-252" width="128" height="90"/>
-        <element name="SecondColor" positionX="-171" positionY="-243" width="128" height="90"/>
-        <element name="FirstColor" positionX="-162" positionY="-234" width="128" height="90"/>
+        <element name="FifthColor" positionX="-180" positionY="-252" width="128" height="105"/>
+        <element name="FirstColor" positionX="-162" positionY="-234" width="128" height="105"/>
+        <element name="FourthColor" positionX="-198" positionY="-270" width="128" height="105"/>
+        <element name="Palautte" positionX="-324" positionY="-318" width="128" height="150"/>
+        <element name="SecondColor" positionX="-171" positionY="-243" width="128" height="105"/>
+        <element name="ThirdColor" positionX="-189" positionY="-261" width="128" height="105"/>
     </elements>
 </model>
