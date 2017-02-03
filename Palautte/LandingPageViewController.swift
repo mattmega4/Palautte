@@ -13,12 +13,34 @@ class LandingPageViewController: UIViewController, UITextFieldDelegate {
   @IBOutlet weak var scrollView: UIScrollView!
   @IBOutlet weak var contentView: UIView!
   
+  @IBOutlet weak var demoButton: UIBarButtonItem!
   @IBOutlet weak var saveButton: UIBarButtonItem!
   
-
+  @IBOutlet weak var firstButtonContainer: UIView!
+  @IBOutlet weak var secondButtonContainer: UIView!
+  @IBOutlet weak var thirdButtonContainer: UIView!
+  @IBOutlet weak var fourthButtonContainer: UIView!
+  @IBOutlet weak var fifthButtonContainer: UIView!
+  
+  @IBOutlet weak var firstIndicatorView: UIView!
+  @IBOutlet weak var secondIndicatorView: UIView!
+  @IBOutlet weak var thirdIndicatorView: UIView!
+  @IBOutlet weak var fourthIndicatorView: UIView!
+  @IBOutlet weak var fifthIndicatorView: UIView!
+  
+  @IBOutlet weak var firstColorButton: UIButton!
+  @IBOutlet weak var secondColorButton: UIButton!
+  @IBOutlet weak var thirdColorButton: UIButton!
+  @IBOutlet weak var fourthColorButton: UIButton!
+  @IBOutlet weak var fifthColorButton: UIButton!
+  
+  @IBOutlet weak var slidersButton: UIButton!
+  @IBOutlet weak var wheelButton: UIButton!
+  
+  @IBOutlet weak var sliderButtonUnderlineView: UIView!
+  @IBOutlet weak var wheelButtonUnderlineView: UIView!
   
   @IBOutlet weak var controlsContainer: UIView!
-  @IBOutlet weak var sliderContainer: UIView!
   
   @IBOutlet weak var redLabel: UILabel!
   @IBOutlet weak var redTextField: UITextField!
@@ -29,53 +51,26 @@ class LandingPageViewController: UIViewController, UITextFieldDelegate {
   @IBOutlet weak var blueLabel: UILabel!
   @IBOutlet weak var blueTextField: UITextField!
   
-  //  @IBOutlet weak var sliderHolderView: SliderHolderView!
-  
-  let leftHiddenView = UIView()
-  let centerHiddenView = UIView()
-  let rightHiddenView = UIView()
+  @IBOutlet weak var sliderOrWheelContainerView: UIView!
+
   
   let redSlider = UISlider()
   let greenSlider = UISlider()
   let blueSlider = UISlider()
   
   var textFieldArray: [UITextField] = []
-  var isBackgroundColorInFocus = true
-  
-  var currentRedBackgroundString = "255"
-  var currentGreenBackgroundString = "255"
-  var currentBlueBackgroundString = "255"
-  
-  var currentRedForegroundString = "0"
-  var currentGreenForegroundString = "0"
-  var currentBlueForegroundString = "0"
-  
-  var currentRedBackgroundFloat: Float = 255
-  var currentGreenBackgroundFloat: Float = 255
-  var currentBlueBackgroundFloat: Float = 255
-  
-  var currentRedForegroundFloat: Float = 0
-  var currentGreenForegroundFloat: Float = 0
-  var currentBlueForegroundFloat: Float = 0
-  
-  var currentRedBackgroundCGFloat: CGFloat = 255.0/255.0
-  var currentGreenBackgroundCGFloat: CGFloat = 255.0/255.0
-  var currentBlueBackgroundCGFloat: CGFloat = 255.0/255.0
-  
-  var currentRedForegroundCGFloat: CGFloat = 0.0/255.0
-  var currentGreenForegroundCGFloat: CGFloat = 0.0/255.0
-  var currentBlueForegroundCGFloat: CGFloat = 0.0/255.0
-  
-  
-  // MARK: View Functions
+
   
   override func viewDidLoad() {
     super.viewDidLoad()
     
     title = "Create Palautte"
-    
+    UINavigationBar.appearance().barTintColor = UIColor(red: 50.0/255.0, green: 60.0/255.0, blue: 80.0/255.0, alpha: 1.0)
+    UINavigationBar.appearance().tintColor = .white
+    UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.white]
     navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white, NSFontAttributeName: UIFont(name: "Copperplate-Bold", size: 20)!]
     
+
     redTextField.delegate = self
     greenTextField.delegate = self
     blueTextField.delegate = self
@@ -118,12 +113,16 @@ class LandingPageViewController: UIViewController, UITextFieldDelegate {
   
   func useSliders() {
     
+    let leftHiddenView = UIView()
+    let centerHiddenView = UIView()
+    let rightHiddenView = UIView()
+    
     let hiddenViews = [leftHiddenView, centerHiddenView, rightHiddenView]
     var allHiddenViewConstraints: [NSLayoutConstraint] = []
     
     for views in hiddenViews {
       
-      sliderContainer.addSubview(views)
+      sliderOrWheelContainerView.addSubview(views)
       views.backgroundColor = .clear
       views.translatesAutoresizingMaskIntoConstraints = false
       
@@ -137,8 +136,8 @@ class LandingPageViewController: UIViewController, UITextFieldDelegate {
     let leftViewVerticalCenterConstraint = leftHiddenView.centerYAnchor.constraint(equalTo: centerHiddenView.centerYAnchor, constant: 0)
     let leftViewTrailingConstraint = leftHiddenView.trailingAnchor.constraint(equalTo: centerHiddenView.leadingAnchor, constant: -60)
     
-    let centerViewHorizontalConstraint = centerHiddenView.centerXAnchor.constraint(equalTo: sliderContainer.centerXAnchor)
-    let centerViewTopConstraint = centerHiddenView.topAnchor.constraint(equalTo: sliderContainer.topAnchor, constant: 50)
+    let centerViewHorizontalConstraint = centerHiddenView.centerXAnchor.constraint(equalTo: sliderOrWheelContainerView.centerXAnchor)
+    let centerViewTopConstraint = centerHiddenView.topAnchor.constraint(equalTo: sliderOrWheelContainerView.topAnchor, constant: 50)
     
     let rightViewVerticalCenterConstraint = rightHiddenView.centerYAnchor.constraint(equalTo: centerHiddenView.centerYAnchor, constant: 0)
     let rightViewTrailingConstraint = rightHiddenView.leadingAnchor.constraint(equalTo: centerHiddenView.trailingAnchor, constant: 60)
@@ -161,18 +160,18 @@ class LandingPageViewController: UIViewController, UITextFieldDelegate {
     
     for slider in colorSliders {
       slider.translatesAutoresizingMaskIntoConstraints = false
-      sliderContainer.addSubview(slider)
+      sliderOrWheelContainerView.addSubview(slider)
       slider.transform = CGAffineTransform(rotationAngle: CGFloat(-M_PI_2))
       slider.minimumValue = 0
       slider.maximumValue = 255
       slider.isEnabled = true
       slider.isUserInteractionEnabled = true
-      constraints.append(slider.widthAnchor.constraint(equalTo: sliderContainer.heightAnchor))
-      constraints.append(slider.centerYAnchor.constraint(equalTo: sliderContainer.centerYAnchor))
+      constraints.append(slider.widthAnchor.constraint(equalTo: sliderOrWheelContainerView.heightAnchor))
+      constraints.append(slider.centerYAnchor.constraint(equalTo: sliderOrWheelContainerView.centerYAnchor))
       
     }
     constraints.append(redSlider.centerXAnchor.constraint(equalTo: leftHiddenView.centerXAnchor))
-    constraints.append(greenSlider.centerXAnchor.constraint(equalTo: sliderContainer.centerXAnchor))
+    constraints.append(greenSlider.centerXAnchor.constraint(equalTo: sliderOrWheelContainerView.centerXAnchor))
     constraints.append(blueSlider.centerXAnchor.constraint(equalTo: rightHiddenView.centerXAnchor))
     
     NSLayoutConstraint.activate(constraints)
@@ -293,16 +292,7 @@ class LandingPageViewController: UIViewController, UITextFieldDelegate {
 //    setBackgroundAndForegroundColors()
 //  }
   
-  func textFieldShouldClear(_ textField: UITextField) -> Bool {
-    self.view.endEditing(true)
-    return false
-  }
-  
-  func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-    self.view.endEditing(true)
-    textField.resignFirstResponder()
-    return false
-  }
+
   
   
   // MARK: IBActions
@@ -353,32 +343,37 @@ class LandingPageViewController: UIViewController, UITextFieldDelegate {
   
   // MARK: Segue
   
-  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    
-    if segue.identifier == "fromLandingPageToAddPalautte" {
-      
-      if let controller = segue.destination as? UINavigationController {
-        
-        if let destinationVC = controller.topViewController as? AddPalautteViewController {
-          
-          destinationVC.transferredRedBackgroundColorValue = currentGreenBackgroundFloat
-          destinationVC.transferredRedBackgroundColorValue = currentRedBackgroundFloat
-          destinationVC.transferredGreenBackgroundColorValue = currentGreenBackgroundFloat
-          destinationVC.transferredBlueBackgroundColorValue = currentBlueBackgroundFloat
-          
-          destinationVC.transferredRedForegroundColorValue = currentRedForegroundFloat
-          destinationVC.transferredGreenForegroundColorValue = currentGreenForegroundFloat
-          destinationVC.transferredBlueForegroundColorValue = currentBlueForegroundFloat
-          
-          
-        }
-      }
-      
-    }
-    
+//  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//    
+//    if segue.identifier == "fromLandingPageToAddPalautte" {
+//      
+//      if let controller = segue.destination as? UINavigationController {
+//        
+//        if let destinationVC = controller.topViewController as? AddPalautteViewController {
+//          
+//          
+//          
+//          
+//        }
+//      }
+//      
+//    }
+//    
+//  }
+  
+  
+  // MARK: Keyboard Methods
+  
+  func textFieldShouldClear(_ textField: UITextField) -> Bool {
+    self.view.endEditing(true)
+    return false
   }
   
-  
+  func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    self.view.endEditing(true)
+    textField.resignFirstResponder()
+    return false
+  }
   
   
   // MARK: Keyboard Methods

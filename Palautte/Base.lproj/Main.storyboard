@@ -329,7 +329,7 @@
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" id="ICu-Mg-bOd">
-                        <barButtonItem key="leftBarButtonItem" title="Test" id="VjC-ON-GXm">
+                        <barButtonItem key="leftBarButtonItem" title="Demo" id="VjC-ON-GXm">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="fub-7P-tNY">
@@ -345,13 +345,33 @@
                         <outlet property="blueTextField" destination="m5H-0w-oc1" id="aOL-HN-Qqh"/>
                         <outlet property="contentView" destination="ae4-BI-si2" id="6zk-2Y-fe9"/>
                         <outlet property="controlsContainer" destination="YpA-jG-NvC" id="F1v-OA-I4t"/>
+                        <outlet property="demoButton" destination="VjC-ON-GXm" id="KQQ-mE-Qfy"/>
+                        <outlet property="fifthButtonContainer" destination="lJF-SL-EAv" id="coN-k5-2XO"/>
+                        <outlet property="fifthColorButton" destination="zBG-Cr-Ols" id="Y6V-QZ-7Tl"/>
+                        <outlet property="fifthIndicatorView" destination="wh0-qd-Wwa" id="bwi-pi-iIN"/>
+                        <outlet property="firstButtonContainer" destination="2Jr-OW-84f" id="gz0-Fn-h1D"/>
+                        <outlet property="firstColorButton" destination="6yH-uJ-hTE" id="I4W-ke-xE9"/>
+                        <outlet property="firstIndicatorView" destination="Yce-3f-X5S" id="Mgw-F7-Aux"/>
+                        <outlet property="fourthButtonContainer" destination="fYG-9u-Bgi" id="4Uh-GD-f35"/>
+                        <outlet property="fourthColorButton" destination="bGJ-Lc-bd0" id="pVL-tY-MpF"/>
+                        <outlet property="fourthIndicatorView" destination="YnJ-lU-LgR" id="Wqa-U5-aOZ"/>
                         <outlet property="greenLabel" destination="cSS-Pp-hZ6" id="FWw-Od-Xly"/>
                         <outlet property="greenTextField" destination="BGU-fq-m6X" id="3XJ-Gy-ETd"/>
                         <outlet property="redLabel" destination="TGb-dB-oI8" id="hFh-Xy-UDf"/>
                         <outlet property="redTextField" destination="wsh-zH-AhB" id="SfH-mi-Yj9"/>
                         <outlet property="saveButton" destination="fub-7P-tNY" id="x2g-3u-kF5"/>
                         <outlet property="scrollView" destination="vZZ-JS-puS" id="JQt-EK-W55"/>
-                        <outlet property="sliderContainer" destination="qen-Xi-j47" id="IpW-nH-KUV"/>
+                        <outlet property="secondButtonContainer" destination="bDN-xo-JyV" id="ijB-bb-sI9"/>
+                        <outlet property="secondColorButton" destination="OQK-vZ-9ZJ" id="krX-A8-WBn"/>
+                        <outlet property="secondIndicatorView" destination="Xqx-N5-arz" id="C1h-L0-B1p"/>
+                        <outlet property="sliderButtonUnderlineView" destination="qBv-q2-VLl" id="Yuj-dF-sma"/>
+                        <outlet property="sliderOrWheelContainerView" destination="qen-Xi-j47" id="h2E-pG-l8I"/>
+                        <outlet property="slidersButton" destination="H2G-mf-I00" id="oxZ-yU-ztM"/>
+                        <outlet property="thirdButtonContainer" destination="vJE-P2-s7m" id="Oiw-DV-MG7"/>
+                        <outlet property="thirdColorButton" destination="wcZ-Wq-D8N" id="zDy-Iw-wIn"/>
+                        <outlet property="thirdIndicatorView" destination="wyB-JZ-xZM" id="yiY-uA-ZC3"/>
+                        <outlet property="wheelButton" destination="Dgz-Iv-Hqg" id="bDP-yu-B0f"/>
+                        <outlet property="wheelButtonUnderlineView" destination="i5b-pa-A6k" id="Gs6-ON-BzK"/>
                         <segue destination="kLT-C2-QZ1" kind="presentation" identifier="fromLandingPageToAddPalautte" id="9Aq-RM-i3N"/>
                         <segue destination="oeH-ki-Y7G" kind="presentation" id="Fpd-PS-OE2"/>
                     </connections>

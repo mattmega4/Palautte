@@ -99,16 +99,8 @@
 			isa = PBXGroup;
 			children = (
 				1DA83A2B1E0245A300BB5C30 /* Palautte.xcdatamodel */,
-				1DA83A311E0245BA00BB5C30 /* Generated */,
 			);
 			name = Model;
-			sourceTree = "<group>";
-		};
-		1DA83A311E0245BA00BB5C30 /* Generated */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Generated;
 			sourceTree = "<group>";
 		};
 		1DA83A321E02460C00BB5C30 /* Saved Palautte Cell */ = {
@@ -325,6 +317,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = K8YZSQZRNW;
 				INFOPLIST_FILE = Palautte/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.matthewhsingleton.Palautte;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -338,6 +331,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = K8YZSQZRNW;
 				INFOPLIST_FILE = Palautte/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.matthewhsingleton.Palautte;
 				PRODUCT_NAME = "$(TARGET_NAME)";

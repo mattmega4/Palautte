@@ -20,12 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // Override point for customization after application launch.
     
     UIApplication.shared.statusBarStyle = .lightContent
-    
-    
-    UINavigationBar.appearance().barTintColor = UIColor(red: 50.0/255.0, green: 60.0/255.0, blue: 80.0/255.0, alpha: 1.0)
-    UINavigationBar.appearance().tintColor = .white
-    UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.white]
-    
+
     UITabBar.appearance().isTranslucent = false
     UITabBar.appearance().barTintColor = UIColor.init(red: 25.0/255.0, green: 25.0/255.0, blue: 25.0/255.0, alpha: 1.0)
     
