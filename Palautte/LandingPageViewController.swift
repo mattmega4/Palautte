@@ -104,10 +104,15 @@ class LandingPageViewController: UIViewController, UITextFieldDelegate {
   func setNavBar() {
     
     title = "Create Palautte"
-    UINavigationBar.appearance().barTintColor = UIColor(red: 50.0/255.0, green: 60.0/255.0, blue: 80.0/255.0, alpha: 1.0)
+    UINavigationBar.appearance().barTintColor = UIColor(red: 50.0/255.0,
+                                                        green: 60.0/255.0,
+                                                        blue: 80.0/255.0,
+                                                        alpha: 1.0)
     UINavigationBar.appearance().tintColor = .white
     UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.white]
-    navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white, NSFontAttributeName: UIFont(name: "Copperplate-Bold", size: 20)!]
+    navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white,
+                                                               NSFontAttributeName: UIFont(name: "Copperplate-Bold",
+                                                                                           size: 20)!]
     
   }
   
