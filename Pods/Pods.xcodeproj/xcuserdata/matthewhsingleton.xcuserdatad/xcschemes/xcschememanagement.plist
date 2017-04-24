@@ -6,33 +6,43 @@
 	<dict>
 		<key>GoogleToolboxForMac.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>1</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Pods-Palautte.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>2</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Protobuf.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>3</integer>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>PureLayout.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>223404913CE5FC98F4E1E55D52DB6804</key>
+		<key>277878455184FE1EF152AD316CC903E6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>51DD0E8A7196715E2C58E1421D12255D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9F4B35AF095B9B080325750EDBDB1A30</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>C5B80060FE8C664DF08841000F41D515</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F806355CF436E671DC74C75D1A23FAF1</key>
 		<dict>
 			<key>primary</key>
 			<true/>

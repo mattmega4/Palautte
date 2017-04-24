@@ -6,7 +6,7 @@ target 'Palautte' do
   use_frameworks!
 
   # Pods for Palautte
-	pod 'Firebase/Core'
+	pod 'PureLayout'
 	pod 'Firebase/Crash'
 
 end
