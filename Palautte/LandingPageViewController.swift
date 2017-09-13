@@ -109,9 +109,9 @@ class LandingPageViewController: UIViewController, UITextFieldDelegate {
                                                         blue: 80.0/255.0,
                                                         alpha: 1.0)
     UINavigationBar.appearance().tintColor = .white
-    UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.white]
-    navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white,
-                                                               NSFontAttributeName: UIFont(name: "Copperplate-Bold",
+    UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey(rawValue: NSAttributedStringKey.foregroundColor.rawValue) : UIColor.white]
+    navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey(rawValue: NSAttributedStringKey.foregroundColor.rawValue): UIColor.white,
+                                                               NSAttributedStringKey(rawValue: NSAttributedStringKey.font.rawValue): UIFont(name: "Copperplate-Bold",
                                                                                            size: 20)!]
     
   }
@@ -496,7 +496,7 @@ class LandingPageViewController: UIViewController, UITextFieldDelegate {
   
   // MARK: Keyboard Methods
   
-  func keyboardWillShow(notification:NSNotification) {
+  @objc func keyboardWillShow(notification:NSNotification) {
     var userInfo = notification.userInfo!
     var keyboardFrame:CGRect = (userInfo[UIKeyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
     keyboardFrame = self.view.convert(keyboardFrame, from: nil)
@@ -505,12 +505,12 @@ class LandingPageViewController: UIViewController, UITextFieldDelegate {
     self.scrollView.contentInset = contentInset
   }
   
-  func keyboardWillHide(notification:NSNotification) {
+  @objc func keyboardWillHide(notification:NSNotification) {
     let contentInset:UIEdgeInsets = UIEdgeInsets.zero
     self.scrollView.contentInset = contentInset
   }
   
-  func dismissKeyboard() {
+  @objc func dismissKeyboard() {
     view.endEditing(true)
   }
   

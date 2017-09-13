@@ -14,20 +14,8 @@
 		1DA83A211E02454C00BB5C30 /* LandingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA83A1F1E02454C00BB5C30 /* LandingPageViewController.swift */; };
 		1DA83A2C1E0245A300BB5C30 /* Palautte.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 1DA83A2B1E0245A300BB5C30 /* Palautte.xcdatamodel */; };
 		1DA83A461E02473F00BB5C30 /* ShadowForAddPalautteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA83A451E02473F00BB5C30 /* ShadowForAddPalautteTableViewCell.swift */; };
-		1DBEDFB81E44885600344695 /* Palautte+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBEDFAC1E44885600344695 /* Palautte+CoreDataClass.swift */; };
-		1DBEDFB91E44885600344695 /* Palautte+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBEDFAD1E44885600344695 /* Palautte+CoreDataProperties.swift */; };
-		1DBEDFBA1E44885600344695 /* FirstColor+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBEDFAE1E44885600344695 /* FirstColor+CoreDataClass.swift */; };
-		1DBEDFBB1E44885600344695 /* FirstColor+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBEDFAF1E44885600344695 /* FirstColor+CoreDataProperties.swift */; };
-		1DBEDFBC1E44885600344695 /* FifthColor+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBEDFB01E44885600344695 /* FifthColor+CoreDataClass.swift */; };
-		1DBEDFBD1E44885600344695 /* FifthColor+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBEDFB11E44885600344695 /* FifthColor+CoreDataProperties.swift */; };
-		1DBEDFBE1E44885600344695 /* FourthColor+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBEDFB21E44885600344695 /* FourthColor+CoreDataClass.swift */; };
-		1DBEDFBF1E44885600344695 /* FourthColor+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBEDFB31E44885600344695 /* FourthColor+CoreDataProperties.swift */; };
-		1DBEDFC01E44885600344695 /* ThirdColor+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBEDFB41E44885600344695 /* ThirdColor+CoreDataClass.swift */; };
-		1DBEDFC11E44885600344695 /* ThirdColor+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBEDFB51E44885600344695 /* ThirdColor+CoreDataProperties.swift */; };
-		1DBEDFC21E44885600344695 /* SecondColor+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBEDFB61E44885600344695 /* SecondColor+CoreDataClass.swift */; };
-		1DBEDFC31E44885600344695 /* SecondColor+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBEDFB71E44885600344695 /* SecondColor+CoreDataProperties.swift */; };
 		1DBEDFC91E44897500344695 /* General+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBEDFC81E44897500344695 /* General+Extensions.swift */; };
-		1DDA6DE41E50F6C0006F19EA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1DDA6DE31E50F6C0006F19EA /* GoogleService-Info.plist */; };
+		29094C151EB2B63600B7A4A0 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29094C141EB2B63600B7A4A0 /* LandingViewController.swift */; };
 		68EE46AAD6A9C0F7CA81EC80 /* Pods_Palautte.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A69C4ADBF1227394FEA7CC4B /* Pods_Palautte.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,20 +29,8 @@
 		1DA83A1F1E02454C00BB5C30 /* LandingPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingPageViewController.swift; sourceTree = "<group>"; };
 		1DA83A2B1E0245A300BB5C30 /* Palautte.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Palautte.xcdatamodel; sourceTree = "<group>"; };
 		1DA83A451E02473F00BB5C30 /* ShadowForAddPalautteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowForAddPalautteTableViewCell.swift; sourceTree = "<group>"; };
-		1DBEDFAC1E44885600344695 /* Palautte+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Palautte+CoreDataClass.swift"; sourceTree = "<group>"; };
-		1DBEDFAD1E44885600344695 /* Palautte+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Palautte+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		1DBEDFAE1E44885600344695 /* FirstColor+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FirstColor+CoreDataClass.swift"; sourceTree = "<group>"; };
-		1DBEDFAF1E44885600344695 /* FirstColor+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FirstColor+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		1DBEDFB01E44885600344695 /* FifthColor+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FifthColor+CoreDataClass.swift"; sourceTree = "<group>"; };
-		1DBEDFB11E44885600344695 /* FifthColor+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FifthColor+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		1DBEDFB21E44885600344695 /* FourthColor+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FourthColor+CoreDataClass.swift"; sourceTree = "<group>"; };
-		1DBEDFB31E44885600344695 /* FourthColor+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FourthColor+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		1DBEDFB41E44885600344695 /* ThirdColor+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ThirdColor+CoreDataClass.swift"; sourceTree = "<group>"; };
-		1DBEDFB51E44885600344695 /* ThirdColor+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ThirdColor+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		1DBEDFB61E44885600344695 /* SecondColor+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SecondColor+CoreDataClass.swift"; sourceTree = "<group>"; };
-		1DBEDFB71E44885600344695 /* SecondColor+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SecondColor+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		1DBEDFC81E44897500344695 /* General+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "General+Extensions.swift"; sourceTree = "<group>"; };
-		1DDA6DE31E50F6C0006F19EA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		29094C141EB2B63600B7A4A0 /* LandingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
 		82BA6AB8DB1BC305D96603FD /* Pods-Palautte.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Palautte.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Palautte/Pods-Palautte.debug.xcconfig"; sourceTree = "<group>"; };
 		9EE5603D8152D4336EEC58BE /* Pods-Palautte.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Palautte.release.xcconfig"; path = "Pods/Target Support Files/Pods-Palautte/Pods-Palautte.release.xcconfig"; sourceTree = "<group>"; };
 		A69C4ADBF1227394FEA7CC4B /* Pods_Palautte.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Palautte.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,11 +78,8 @@
 		1DA83A091E0244C500BB5C30 /* Palautte */ = {
 			isa = PBXGroup;
 			children = (
-				1DA83A301E0245B700BB5C30 /* Model */,
-				1DA83A2F1E0245B400BB5C30 /* View */,
-				1DA83A2E1E0245B200BB5C30 /* Controller */,
-				1DBEDFC71E44894200344695 /* Extensions */,
-				1DA83A2D1E0245AF00BB5C30 /* Additional Files */,
+				29094C121EB2B49C00B7A4A0 /* New */,
+				29B49D211EAF4B3F006BD4A8 /* Old */,
 			);
 			path = Palautte;
 			sourceTree = "<group>";
@@ -117,7 +90,6 @@
 				1DA83A0A1E0244C500BB5C30 /* AppDelegate.swift */,
 				1DA83A141E0244C500BB5C30 /* Assets.xcassets */,
 				1DA83A191E0244C500BB5C30 /* Info.plist */,
-				1DDA6DE31E50F6C0006F19EA /* GoogleService-Info.plist */,
 			);
 			name = "Additional Files";
 			sourceTree = "<group>";
@@ -144,9 +116,7 @@
 		1DA83A301E0245B700BB5C30 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				1DBEDFC51E44889700344695 /* XCDataModel File */,
-				1DBEDFC61E4488CC00344695 /* Core Data Properties */,
-				1DBEDFC41E44889200344695 /* Core Data Classes */,
+				291403EF1EAE937600D3B34C /* Core Data */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -169,12 +139,6 @@
 		1DBEDFC41E44889200344695 /* Core Data Classes */ = {
 			isa = PBXGroup;
 			children = (
-				1DBEDFAC1E44885600344695 /* Palautte+CoreDataClass.swift */,
-				1DBEDFAE1E44885600344695 /* FirstColor+CoreDataClass.swift */,
-				1DBEDFB01E44885600344695 /* FifthColor+CoreDataClass.swift */,
-				1DBEDFB21E44885600344695 /* FourthColor+CoreDataClass.swift */,
-				1DBEDFB41E44885600344695 /* ThirdColor+CoreDataClass.swift */,
-				1DBEDFB61E44885600344695 /* SecondColor+CoreDataClass.swift */,
 			);
 			name = "Core Data Classes";
 			sourceTree = "<group>";
@@ -190,12 +154,6 @@
 		1DBEDFC61E4488CC00344695 /* Core Data Properties */ = {
 			isa = PBXGroup;
 			children = (
-				1DBEDFAD1E44885600344695 /* Palautte+CoreDataProperties.swift */,
-				1DBEDFAF1E44885600344695 /* FirstColor+CoreDataProperties.swift */,
-				1DBEDFB11E44885600344695 /* FifthColor+CoreDataProperties.swift */,
-				1DBEDFB31E44885600344695 /* FourthColor+CoreDataProperties.swift */,
-				1DBEDFB51E44885600344695 /* ThirdColor+CoreDataProperties.swift */,
-				1DBEDFB71E44885600344695 /* SecondColor+CoreDataProperties.swift */,
 			);
 			name = "Core Data Properties";
 			sourceTree = "<group>";
@@ -206,6 +164,44 @@
 				1DBEDFC81E44897500344695 /* General+Extensions.swift */,
 			);
 			name = Extensions;
+			sourceTree = "<group>";
+		};
+		29094C121EB2B49C00B7A4A0 /* New */ = {
+			isa = PBXGroup;
+			children = (
+				1DA83A301E0245B700BB5C30 /* Model */,
+				1DA83A2F1E0245B400BB5C30 /* View */,
+				29094C131EB2B4C700B7A4A0 /* Controller */,
+				1DA83A2D1E0245AF00BB5C30 /* Additional Files */,
+				1DBEDFC71E44894200344695 /* Extensions */,
+			);
+			name = New;
+			sourceTree = "<group>";
+		};
+		29094C131EB2B4C700B7A4A0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				29094C141EB2B63600B7A4A0 /* LandingViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		291403EF1EAE937600D3B34C /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				1DBEDFC51E44889700344695 /* XCDataModel File */,
+				1DBEDFC61E4488CC00344695 /* Core Data Properties */,
+				1DBEDFC41E44889200344695 /* Core Data Classes */,
+			);
+			name = "Core Data";
+			sourceTree = "<group>";
+		};
+		29B49D211EAF4B3F006BD4A8 /* Old */ = {
+			isa = PBXGroup;
+			children = (
+				1DA83A2E1E0245B200BB5C30 /* Controller */,
+			);
+			name = Old;
 			sourceTree = "<group>";
 		};
 		95A607A1EDF76B3108581C12 /* Frameworks */ = {
@@ -247,12 +243,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Matthew Singleton";
 				TargetAttributes = {
 					1DA83A061E0244C500BB5C30 = {
 						CreatedOnToolsVersion = 8.2;
 						DevelopmentTeam = K8YZSQZRNW;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -281,7 +278,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1DA83A181E0244C500BB5C30 /* LaunchScreen.storyboard in Resources */,
-				1DDA6DE41E50F6C0006F19EA /* GoogleService-Info.plist in Resources */,
 				1DA83A151E0244C500BB5C30 /* Assets.xcassets in Resources */,
 				1DA83A101E0244C500BB5C30 /* Main.storyboard in Resources */,
 			);
@@ -316,7 +312,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "GOOGLE_APP_ID= 1:305432994554:ios:f45d4adf03e80b9d\n\n\"${PODS_ROOT}\"/FirebaseCrash/upload-sym \"${SRCROOT}\"/CrashReportingKey/ServiceAccount.json\n";
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 3605c744e15ddf7d8ef099f0020dfcdd2e2abd5c 7bf7613729d303dcf6eda216f60fde4100191c032181ca9d63ffb7b2533bc45a";
 		};
 		3ACDE8B280192D8A2AFF4F80 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -355,23 +351,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1DBEDFBB1E44885600344695 /* FirstColor+CoreDataProperties.swift in Sources */,
-				1DBEDFBF1E44885600344695 /* FourthColor+CoreDataProperties.swift in Sources */,
 				1DA83A2C1E0245A300BB5C30 /* Palautte.xcdatamodel in Sources */,
-				1DBEDFB91E44885600344695 /* Palautte+CoreDataProperties.swift in Sources */,
-				1DBEDFBD1E44885600344695 /* FifthColor+CoreDataProperties.swift in Sources */,
 				1DBEDFC91E44897500344695 /* General+Extensions.swift in Sources */,
-				1DBEDFC31E44885600344695 /* SecondColor+CoreDataProperties.swift in Sources */,
-				1DBEDFBA1E44885600344695 /* FirstColor+CoreDataClass.swift in Sources */,
-				1DBEDFBE1E44885600344695 /* FourthColor+CoreDataClass.swift in Sources */,
-				1DBEDFC11E44885600344695 /* ThirdColor+CoreDataProperties.swift in Sources */,
 				1DA83A0B1E0244C500BB5C30 /* AppDelegate.swift in Sources */,
-				1DBEDFC21E44885600344695 /* SecondColor+CoreDataClass.swift in Sources */,
-				1DBEDFB81E44885600344695 /* Palautte+CoreDataClass.swift in Sources */,
-				1DBEDFC01E44885600344695 /* ThirdColor+CoreDataClass.swift in Sources */,
 				1DA83A211E02454C00BB5C30 /* LandingPageViewController.swift in Sources */,
+				29094C151EB2B63600B7A4A0 /* LandingViewController.swift in Sources */,
 				1DA83A461E02473F00BB5C30 /* ShadowForAddPalautteTableViewCell.swift in Sources */,
-				1DBEDFBC1E44885600344695 /* FifthColor+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,7 +391,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -414,7 +401,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -455,7 +446,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -463,7 +456,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -495,11 +492,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = K8YZSQZRNW;
 				INFOPLIST_FILE = Palautte/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.matthewhsingleton.Palautte;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -510,11 +508,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = K8YZSQZRNW;
 				INFOPLIST_FILE = Palautte/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.matthewhsingleton.Palautte;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
