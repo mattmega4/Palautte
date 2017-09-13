@@ -25,7 +25,7 @@ class SavedPalauttesViewController: UIViewController{
     
     title = "Saved Palauttes"
     
-    navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white, NSFontAttributeName: UIFont(name: "Copperplate-Bold", size: 20)!]
+    navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white, NSAttributedStringKey.font: UIFont(name: "Copperplate-Bold", size: 20)!]
     
     self.tableView.delegate = self
     self.tableView.dataSource = self

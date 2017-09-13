@@ -87,7 +87,7 @@ class LandingPageViewController: UIViewController, UITextFieldDelegate {
     
     title = "Create Palautte"
     
-    navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white, NSFontAttributeName: UIFont(name: "Copperplate-Bold", size: 20)!]
+    navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white, NSAttributedStringKey.font: UIFont(name: "Copperplate-Bold", size: 20)!]
     
     redTextField.delegate = self
     greenTextField.delegate = self
@@ -316,11 +316,11 @@ class LandingPageViewController: UIViewController, UITextFieldDelegate {
   }
   
   
-  func textFieldTextChecker(textField: UITextField) {
+  @objc func textFieldTextChecker(textField: UITextField) {
     
     guard var text = textField.text else {return}
     
-    if let value: Int = NumberFormatter().number(from: text) as Int? {
+    if let value: Int = NumberFormatter().number(from: text) as! Int? {
       var newValue = Float(value)
       let maxVal: Float = 255
       if newValue > maxVal {
@@ -466,7 +466,7 @@ class LandingPageViewController: UIViewController, UITextFieldDelegate {
   
   // MARK: Target Actions
   
-  func redSliderAction(sender: UISlider) {
+  @objc func redSliderAction(sender: UISlider) {
     if isBackgroundColorInFocus == true {
       currentRedBackgroundString = String(Int(sender.value))
       redTextField.text = String(currentRedBackgroundString)
@@ -479,7 +479,7 @@ class LandingPageViewController: UIViewController, UITextFieldDelegate {
     setBackgroundAndForegroundColors()
   }
   
-  func greenSliderAction(sender: UISlider) {
+  @objc func greenSliderAction(sender: UISlider) {
     if isBackgroundColorInFocus == true {
       currentGreenBackgroundString = String(Int(sender.value))
       greenTextField.text = String(currentGreenBackgroundString)
@@ -492,7 +492,7 @@ class LandingPageViewController: UIViewController, UITextFieldDelegate {
     setBackgroundAndForegroundColors()
   }
   
-  func blueSliderAction(sender: UISlider) {
+  @objc func blueSliderAction(sender: UISlider) {
     if isBackgroundColorInFocus == true {
       currentBlueBackgroundString = String(Int(sender.value))
       blueTextField.text = String(currentBlueBackgroundString)
@@ -538,7 +538,7 @@ class LandingPageViewController: UIViewController, UITextFieldDelegate {
   
   // MARK: Keyboard Methods
   
-  func keyboardWillShow(notification:NSNotification) {
+  @objc func keyboardWillShow(notification:NSNotification) {
     var userInfo = notification.userInfo!
     var keyboardFrame:CGRect = (userInfo[UIKeyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
     keyboardFrame = self.view.convert(keyboardFrame, from: nil)
@@ -547,12 +547,12 @@ class LandingPageViewController: UIViewController, UITextFieldDelegate {
     self.scrollView.contentInset = contentInset
   }
   
-  func keyboardWillHide(notification:NSNotification) {
+  @objc func keyboardWillHide(notification:NSNotification) {
     let contentInset:UIEdgeInsets = UIEdgeInsets.zero
     self.scrollView.contentInset = contentInset
   }
   
-  func dismissKeyboard() {
+  @objc func dismissKeyboard() {
     view.endEditing(true)
   }
   

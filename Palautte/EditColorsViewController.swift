@@ -73,7 +73,7 @@ class EditColorsViewController: UIViewController, UITextFieldDelegate {
     
     title = "Edit Palautte"
     
-    navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white, NSFontAttributeName: UIFont(name: "Copperplate-Bold", size: 20)!]
+    navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white, NSAttributedStringKey.font: UIFont(name: "Copperplate-Bold", size: 20)!]
     
     self.redTextField.delegate = self
     self.greenTextField.delegate = self
@@ -371,11 +371,11 @@ class EditColorsViewController: UIViewController, UITextFieldDelegate {
   
   // MARK: TextField Target Actions
   
-  func textFieldTextChecker(textField: UITextField) {
+  @objc func textFieldTextChecker(textField: UITextField) {
     
     guard var text = textField.text else {return}
     
-    if let value: Int = NumberFormatter().number(from: text) as Int? {
+    if let value: Int = NumberFormatter().number(from: text) as! Int? {
       var newValue = Float(value)
       let maxVal: Float = 255
       if newValue > maxVal {
@@ -472,7 +472,7 @@ class EditColorsViewController: UIViewController, UITextFieldDelegate {
   
   // MARK: Slider Target Actions
   
-  func redSliderAction(sender: UISlider) {
+  @objc func redSliderAction(sender: UISlider) {
     if backgroundInFocus == true {
       currentRedBackgroundFloat = sender.value
       redTextField.text = String(Int(currentRedBackgroundFloat!))
@@ -485,7 +485,7 @@ class EditColorsViewController: UIViewController, UITextFieldDelegate {
     setBackgroundAndForegroundColors()
   }
   
-  func greenSliderAction(sender: UISlider) {
+  @objc func greenSliderAction(sender: UISlider) {
     if backgroundInFocus == true {
       currentGreenBackgroundFloat = sender.value
       greenTextField.text = String(Int(currentGreenBackgroundFloat!))
@@ -498,7 +498,7 @@ class EditColorsViewController: UIViewController, UITextFieldDelegate {
     setBackgroundAndForegroundColors()
   }
   
-  func blueSliderAction(sender: UISlider) {
+  @objc func blueSliderAction(sender: UISlider) {
     if backgroundInFocus == true {
       currentBlueBackgroundFloat = sender.value
       blueTextField.text = String(Int(currentBlueBackgroundFloat!))
@@ -571,7 +571,7 @@ class EditColorsViewController: UIViewController, UITextFieldDelegate {
   
   // MARK: Keyboard Methods
   
-  func keyboardWillShow(notification:NSNotification) {
+  @objc func keyboardWillShow(notification:NSNotification) {
     var userInfo = notification.userInfo!
     var keyboardFrame:CGRect = (userInfo[UIKeyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
     keyboardFrame = self.view.convert(keyboardFrame, from: nil)
@@ -580,12 +580,12 @@ class EditColorsViewController: UIViewController, UITextFieldDelegate {
     self.scrollView.contentInset = contentInset
   }
   
-  func keyboardWillHide(notification:NSNotification) {
+  @objc func keyboardWillHide(notification:NSNotification) {
     let contentInset:UIEdgeInsets = UIEdgeInsets.zero
     self.scrollView.contentInset = contentInset
   }
   
-  func dismissKeyboard() {
+  @objc func dismissKeyboard() {
     view.endEditing(true)
   }
   

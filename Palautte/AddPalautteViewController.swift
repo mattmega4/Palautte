@@ -56,7 +56,7 @@ class AddPalautteViewController: UIViewController, UITextFieldDelegate, UIPicker
     
     title = "add palautte"
     
-    navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white, NSFontAttributeName: UIFont(name: "Copperplate-Bold", size: 20)!]
+    navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white, NSAttributedStringKey.font: UIFont(name: "Copperplate-Bold", size: 20)!]
     
     if let topItem = self.navigationController?.navigationBar.topItem {
       topItem.backBarButtonItem = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.plain, target: nil, action: nil)
@@ -97,7 +97,7 @@ class AddPalautteViewController: UIViewController, UITextFieldDelegate, UIPicker
   
   // MARK: UITextField
   
-  func checkIfTextFieldIsTwentyCharactersOrLess(textField: UITextField) {
+  @objc func checkIfTextFieldIsTwentyCharactersOrLess(textField: UITextField) {
     if textField == nameTextField{
       let maxCharLimit = 20
       let currCharCount = textField.text?.characters.count
@@ -115,7 +115,7 @@ class AddPalautteViewController: UIViewController, UITextFieldDelegate, UIPicker
     }
   }
   
-  func setTextFieldValueToPropertyInPreperationForCoreDataStorage(textField: UITextField) {
+  @objc func setTextFieldValueToPropertyInPreperationForCoreDataStorage(textField: UITextField) {
     
     if textField == nameTextField{
       
@@ -238,7 +238,7 @@ class AddPalautteViewController: UIViewController, UITextFieldDelegate, UIPicker
   
   func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
     let titleData = pickerData[row]
-    let myTitle = NSAttributedString(string: titleData, attributes: [NSFontAttributeName:UIFont(name: "Avenir", size: 15.0)!,NSForegroundColorAttributeName:UIColor.white])
+    let myTitle = NSAttributedString(string: titleData, attributes: [NSAttributedStringKey.font:UIFont(name: "Avenir", size: 15.0)!,NSAttributedStringKey.foregroundColor:UIColor.white])
     return myTitle
   }
   
@@ -297,7 +297,7 @@ class AddPalautteViewController: UIViewController, UITextFieldDelegate, UIPicker
   
   // MARK: Keyboard Methods
   
-  func keyboardWillShow(notification:NSNotification) {
+  @objc func keyboardWillShow(notification:NSNotification) {
     var userInfo = notification.userInfo!
     var keyboardFrame:CGRect = (userInfo[UIKeyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
     keyboardFrame = self.view.convert(keyboardFrame, from: nil)
@@ -307,13 +307,13 @@ class AddPalautteViewController: UIViewController, UITextFieldDelegate, UIPicker
     categoryPickerView.isUserInteractionEnabled = false
   }
   
-  func keyboardWillHide(notification:NSNotification) {
+  @objc func keyboardWillHide(notification:NSNotification) {
     let contentInset:UIEdgeInsets = UIEdgeInsets.zero
     self.scrollView.contentInset = contentInset
     categoryPickerView.isUserInteractionEnabled = true
   }
   
-  func dismissKeyboard() {
+  @objc func dismissKeyboard() {
     categoryPickerView.endEditing(true)
     view.endEditing(true)
   }
