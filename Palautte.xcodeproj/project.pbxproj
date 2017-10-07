@@ -15,7 +15,7 @@
 		1DA83A2C1E0245A300BB5C30 /* Palautte.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 1DA83A2B1E0245A300BB5C30 /* Palautte.xcdatamodel */; };
 		1DA83A461E02473F00BB5C30 /* ShadowForAddPalautteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA83A451E02473F00BB5C30 /* ShadowForAddPalautteTableViewCell.swift */; };
 		1DBEDFC91E44897500344695 /* General+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBEDFC81E44897500344695 /* General+Extensions.swift */; };
-		29094C151EB2B63600B7A4A0 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29094C141EB2B63600B7A4A0 /* LandingViewController.swift */; };
+		29B0C3EF1F887109002399C9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 29B0C3EE1F88708A002399C9 /* GoogleService-Info.plist */; };
 		68EE46AAD6A9C0F7CA81EC80 /* Pods_Palautte.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A69C4ADBF1227394FEA7CC4B /* Pods_Palautte.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,8 +30,7 @@
 		1DA83A2B1E0245A300BB5C30 /* Palautte.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Palautte.xcdatamodel; sourceTree = "<group>"; };
 		1DA83A451E02473F00BB5C30 /* ShadowForAddPalautteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowForAddPalautteTableViewCell.swift; sourceTree = "<group>"; };
 		1DBEDFC81E44897500344695 /* General+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "General+Extensions.swift"; sourceTree = "<group>"; };
-		29094C141EB2B63600B7A4A0 /* LandingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
-		29B0C3ED1F886DAA002399C9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		29B0C3EE1F88708A002399C9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		82BA6AB8DB1BC305D96603FD /* Pods-Palautte.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Palautte.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Palautte/Pods-Palautte.debug.xcconfig"; sourceTree = "<group>"; };
 		9EE5603D8152D4336EEC58BE /* Pods-Palautte.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Palautte.release.xcconfig"; path = "Pods/Target Support Files/Pods-Palautte/Pods-Palautte.release.xcconfig"; sourceTree = "<group>"; };
 		A69C4ADBF1227394FEA7CC4B /* Pods_Palautte.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Palautte.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,11 +88,11 @@
 			isa = PBXGroup;
 			children = (
 				1DA83A161E0244C500BB5C30 /* LaunchScreen.storyboard */,
-				1DA83A2B1E0245A300BB5C30 /* Palautte.xcdatamodel */,
 				1DA83A0A1E0244C500BB5C30 /* AppDelegate.swift */,
 				1DA83A141E0244C500BB5C30 /* Assets.xcassets */,
 				1DA83A191E0244C500BB5C30 /* Info.plist */,
-				29B0C3ED1F886DAA002399C9 /* GoogleService-Info.plist */,
+				29B0C3EE1F88708A002399C9 /* GoogleService-Info.plist */,
+				1DA83A2B1E0245A300BB5C30 /* Palautte.xcdatamodel */,
 			);
 			name = "Additional Files";
 			sourceTree = "<group>";
@@ -101,7 +100,6 @@
 		1DA83A2E1E0245B200BB5C30 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				1DA83A1F1E02454C00BB5C30 /* LandingPageViewController.swift */,
 				1DA83A321E02460C00BB5C30 /* Saved Palautte Cell */,
 			);
 			name = Controller;
@@ -161,7 +159,7 @@
 		29094C131EB2B4C700B7A4A0 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				29094C141EB2B63600B7A4A0 /* LandingViewController.swift */,
+				1DA83A1F1E02454C00BB5C30 /* LandingPageViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -248,6 +246,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1DA83A181E0244C500BB5C30 /* LaunchScreen.storyboard in Resources */,
+				29B0C3EF1F887109002399C9 /* GoogleService-Info.plist in Resources */,
 				1DA83A151E0244C500BB5C30 /* Assets.xcassets in Resources */,
 				1DA83A101E0244C500BB5C30 /* Main.storyboard in Resources */,
 			);
@@ -337,7 +336,6 @@
 				1DBEDFC91E44897500344695 /* General+Extensions.swift in Sources */,
 				1DA83A0B1E0244C500BB5C30 /* AppDelegate.swift in Sources */,
 				1DA83A211E02454C00BB5C30 /* LandingPageViewController.swift in Sources */,
-				29094C151EB2B63600B7A4A0 /* LandingViewController.swift in Sources */,
 				1DA83A461E02473F00BB5C30 /* ShadowForAddPalautteTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -471,14 +469,16 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 82BA6AB8DB1BC305D96603FD /* Pods-Palautte.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = K8YZSQZRNW;
 				INFOPLIST_FILE = Palautte/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.matthewhsingleton.Palautte;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -487,14 +487,16 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9EE5603D8152D4336EEC58BE /* Pods-Palautte.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = K8YZSQZRNW;
 				INFOPLIST_FILE = Palautte/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.matthewhsingleton.Palautte;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;

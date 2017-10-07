@@ -112,7 +112,7 @@ class LandingPageViewController: UIViewController, UITextFieldDelegate {
     UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey(rawValue: NSAttributedStringKey.foregroundColor.rawValue) : UIColor.white]
     navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey(rawValue: NSAttributedStringKey.foregroundColor.rawValue): UIColor.white,
                                                                NSAttributedStringKey(rawValue: NSAttributedStringKey.font.rawValue): UIFont(name: "Copperplate-Bold",
-                                                                                           size: 20)!]
+                                                                                                                                            size: 20)!]
     
   }
   
@@ -401,13 +401,13 @@ class LandingPageViewController: UIViewController, UITextFieldDelegate {
   }
   
   
-//  func selectSliderForHSB() {
-//    
-//    sliderOne.minimumTrackTintColor = UIColor(hue: CGFloat, saturation: CGFloat, brightness: CGFloat, alpha: CGFloat)
-//    
-//    
-//  }
-//  
+  //  func selectSliderForHSB() {
+  //
+  //    sliderOne.minimumTrackTintColor = UIColor(hue: CGFloat, saturation: CGFloat, brightness: CGFloat, alpha: CGFloat)
+  //
+  //
+  //  }
+  //
   
   
   
@@ -461,7 +461,9 @@ class LandingPageViewController: UIViewController, UITextFieldDelegate {
     for slider in sliderArr {
       slider.translatesAutoresizingMaskIntoConstraints = false
       sliderOrWheelContainerView.addSubview(slider)
-      slider.transform = CGAffineTransform(rotationAngle: CGFloat(-M_PI_2))
+      
+//      slider.transform = CGAffineTransform(rotationAngle: CGFloat(-M_PI_2))
+      slider.transform = CGAffineTransform(rotationAngle: -CGFloat.pi / 2)
       slider.minimumValue = 0
       slider.maximumValue = 255
       slider.isEnabled = true
