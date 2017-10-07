@@ -488,6 +488,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1FA800F8B7A5DD8F6EFF6BE8 /* Pods-Palautte.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = K8YZSQZRNW;
 				INFOPLIST_FILE = Palautte/Info.plist;
@@ -502,6 +503,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D17C7DA7DC38871090921BAD /* Pods-Palautte.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = K8YZSQZRNW;
 				INFOPLIST_FILE = Palautte/Info.plist;
