@@ -31,6 +31,7 @@
 		1DA83A451E02473F00BB5C30 /* ShadowForAddPalautteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowForAddPalautteTableViewCell.swift; sourceTree = "<group>"; };
 		1DBEDFC81E44897500344695 /* General+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "General+Extensions.swift"; sourceTree = "<group>"; };
 		29094C141EB2B63600B7A4A0 /* LandingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
+		29B0C3ED1F886DAA002399C9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		82BA6AB8DB1BC305D96603FD /* Pods-Palautte.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Palautte.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Palautte/Pods-Palautte.debug.xcconfig"; sourceTree = "<group>"; };
 		9EE5603D8152D4336EEC58BE /* Pods-Palautte.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Palautte.release.xcconfig"; path = "Pods/Target Support Files/Pods-Palautte/Pods-Palautte.release.xcconfig"; sourceTree = "<group>"; };
 		A69C4ADBF1227394FEA7CC4B /* Pods_Palautte.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Palautte.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,9 +88,12 @@
 		1DA83A2D1E0245AF00BB5C30 /* Additional Files */ = {
 			isa = PBXGroup;
 			children = (
+				1DA83A161E0244C500BB5C30 /* LaunchScreen.storyboard */,
+				1DA83A2B1E0245A300BB5C30 /* Palautte.xcdatamodel */,
 				1DA83A0A1E0244C500BB5C30 /* AppDelegate.swift */,
 				1DA83A141E0244C500BB5C30 /* Assets.xcassets */,
 				1DA83A191E0244C500BB5C30 /* Info.plist */,
+				29B0C3ED1F886DAA002399C9 /* GoogleService-Info.plist */,
 			);
 			name = "Additional Files";
 			sourceTree = "<group>";
@@ -107,7 +111,6 @@
 			isa = PBXGroup;
 			children = (
 				1DA83A0E1E0244C500BB5C30 /* Main.storyboard */,
-				1DA83A161E0244C500BB5C30 /* LaunchScreen.storyboard */,
 				1DA83A471E02474400BB5C30 /* View Extensions */,
 			);
 			name = View;
@@ -116,7 +119,6 @@
 		1DA83A301E0245B700BB5C30 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				291403EF1EAE937600D3B34C /* Core Data */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -134,28 +136,6 @@
 				1DA83A451E02473F00BB5C30 /* ShadowForAddPalautteTableViewCell.swift */,
 			);
 			name = "View Extensions";
-			sourceTree = "<group>";
-		};
-		1DBEDFC41E44889200344695 /* Core Data Classes */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "Core Data Classes";
-			sourceTree = "<group>";
-		};
-		1DBEDFC51E44889700344695 /* XCDataModel File */ = {
-			isa = PBXGroup;
-			children = (
-				1DA83A2B1E0245A300BB5C30 /* Palautte.xcdatamodel */,
-			);
-			name = "XCDataModel File";
-			sourceTree = "<group>";
-		};
-		1DBEDFC61E4488CC00344695 /* Core Data Properties */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "Core Data Properties";
 			sourceTree = "<group>";
 		};
 		1DBEDFC71E44894200344695 /* Extensions */ = {
@@ -184,16 +164,6 @@
 				29094C141EB2B63600B7A4A0 /* LandingViewController.swift */,
 			);
 			name = Controller;
-			sourceTree = "<group>";
-		};
-		291403EF1EAE937600D3B34C /* Core Data */ = {
-			isa = PBXGroup;
-			children = (
-				1DBEDFC51E44889700344695 /* XCDataModel File */,
-				1DBEDFC61E4488CC00344695 /* Core Data Properties */,
-				1DBEDFC41E44889200344695 /* Core Data Classes */,
-			);
-			name = "Core Data";
 			sourceTree = "<group>";
 		};
 		29B49D211EAF4B3F006BD4A8 /* Old */ = {

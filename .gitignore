@@ -65,5 +65,6 @@ fastlane/screenshots
 fastlane/test_output
 
 
-
+Palautte/Palautte.plist
+Palautte/Info.plist
 CrashReportingKey/ServiceAccount.json
